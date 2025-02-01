@@ -1,0 +1,371 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #b10d54, rgb(217, 71, 71), hsl(308, 98%, 40%));
+  color: rgb(0, 0, 0);
+  line-height: 1.75;
+  padding-top: 6rem; /* Adds padding to account for the fixed navbar */
+}
+
+/* Links */
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #f8621c; /* Changes link color on hover */
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+}
+
+/* Responsive Grid */
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.md\:grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.md\:grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+/* Padding and Margin Utilities */
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
+}
+
+/* Text Alignment */
+.text-center {
+  text-align: center;
+}
+
+/* Rounded Corners */
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+/* Shadows */
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Hover Effects */
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+.transition-transform {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Background Opacity */
+.bg-opacity-10 {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.bg-opacity-70 {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Typography */
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/* Width and Height Utilities */
+.max-w-md {
+  max-width: 28rem;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
+.h-32 {
+  height: 8rem;
+}
+
+/* Padding Utilities */
+.p-3 {
+  padding: 0.75rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between; /* Ensures logo on the left, nav on the right */
+  align-items: center; /* Vertically centers items */
+  padding: 1rem 2rem; /* Adds spacing around the header */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  position: fixed; /* Fixes the navbar at the top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensures the navbar spans the full width */
+  z-index: 20; /* Keeps the navbar above other content */
+}
+
+header h1 {
+  font-size: 1.5rem; /* Adjust size of the logo/title */
+  font-weight: bold;
+  margin: 0; /* Removes default margin */
+}
+
+header nav ul {
+  display: flex; /* Aligns links horizontally */
+  gap: 2rem; /* Adds spacing between links */
+  list-style: none; /* Removes bullet points */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+}
+
+header nav ul li a {
+  color: white; /* White text for links */
+  text-decoration: none; /* Removes underline */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+header nav ul li a:hover {
+  color: #ff4d6d; /* Changes link color on hover */
+}
+
+/* Mobile Navigation */
+@media (min-width: 768px) {
+  .md\:hidden {
+    display: none; /* Hides the hamburger menu on desktop */
+  }
+}
+
+/* Show hamburger menu on mobile */
+@media (max-width: 768px) {
+  header nav {
+    display: none; /* Hides the desktop navigation on mobile */
+  }
+
+  header div {
+    display: block; /* Shows the hamburger menu on mobile */
+  }
+
+  header nav ul {
+    flex-direction: column; /* Stacks links vertically */
+    gap: 0.5rem; /* Reduces spacing between links */
+  }
+}
+
+/* Hide mobile navigation on desktop */
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none; /* Hides the hamburger menu and mobile links on desktop */
+  }
+}
+
+/* Show desktop navigation on larger screens */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none; /* Hides the desktop navigation on mobile */
+  }
+}
+/* Hover Scale Effect */
+.hover-scale:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Shadow Effect */
+.hover-shadow:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease-in-out;
+}
+/* Centered Content */
+section {
+  text-align: center; /* Centers all child elements by default */
+  padding: 4rem 1rem; /* Adds vertical spacing */
+  max-width: 800px; /* Limits width for readability */
+  margin: 0 auto; /* Centers the section horizontally */
+}
+
+/* Paragraph Styling */
+p {
+  margin: 0 auto; /* Centers paragraphs horizontally */
+  max-width: 600px; /* Limits width for readability */
+  text-align: center; /* Ensures text is centered */
+}
+
+/* Form Styling */
+form {
+  position: relative;
+  z-index: 10; /* Ensure it's above other elements */
+  margin: 0 auto; /* Centers the form horizontally */
+  max-width: 28rem; /* Limits width for better alignment */
+  text-align: center; /* Ensures form elements are centered */
+}
+
+/* Input and Textarea Styling */
+input,
+textarea,
+button {
+  display: block; /* Makes elements stack vertically */
+  width: 100%; /* Ensures full width within the form */
+  margin: 0.5rem auto; /* Adds spacing between elements */
+  text-align: center; /* Centers placeholder and input text */
+}
+
+/* Particle Background */
+canvas {
+  position: fixed !important; /* Override any conflicting styles */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Place it behind all other content */
+}
+
+/* Optional: Add a semi-transparent overlay for better readability */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 5;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* About Section */
+#about {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: orange; /* Orange color */
+  margin-bottom: 1.5rem;
+}
+
+#about p {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: black; /* Black text */
+  margin: 0 auto;
+  max-width: 42rem; /* Limits width for readability */
+}
+footer {
+  padding: 2rem 1rem;
+}
