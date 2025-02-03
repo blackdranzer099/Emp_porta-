@@ -11,10 +11,9 @@ const Navbar = () => {
     <header>
       <div className="navbar-container">
         {/* Logo */}
-        <NavLink to="/" className="logo">
+        <NavLink to="/" className="logo" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
           Honor Hive
         </NavLink>
-
         {/* Desktop Navigation */}
         <nav className="desktop-nav">
           <ul>
@@ -40,16 +39,19 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
-
         {/* Mobile Navigation */}
         <div className="mobile-nav">
           <button onClick={toggleMobileMenu} className="menu-button">
             {isMobileMenuOpen ? "Close" : "Menu"}
           </button>
-
           {isMobileMenuOpen && (
             <div className="mobile-menu">
               <ul>
+                <li>
+                  <NavLink to="/" onClick={toggleMobileMenu}>
+                    Home
+                  </NavLink>
+                </li>
                 <li>
                   <NavLink to="/about" onClick={toggleMobileMenu}>
                     About

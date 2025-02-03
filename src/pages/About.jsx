@@ -1,10 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  FaTrophy,
-  FaHandshake,
-  FaLightbulb,
-} from "react-icons/fa"; // Import professional icons
+import { FaTrophy, FaHandshake, FaLightbulb } from "react-icons/fa"; // Import professional icons
 
 const About = () => {
   // Team Members Data
@@ -57,7 +53,7 @@ const About = () => {
           transition={{ duration: 1 }}
           className="relative max-w-2xl mx-auto z-10"
         >
-          <h1 className="text-5xl font-extrabold text-white mb-4">About Honor Hive</h1>
+          <h1 className="text-5xl font-extrabold text-white mb-4">About us Honor Hive</h1>
           <p className="text-lg text-white leading-relaxed mb-8">
             Learn more about our mission, team, and the values that drive us to celebrate excellence every day.
           </p>

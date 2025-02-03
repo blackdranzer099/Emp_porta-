@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaQuoteLeft } from "react-icons/fa"; // Import quote icon
+import './Testimonials.css'; // Import the custom CSS file
 
 const testimonials = [
   {
@@ -8,52 +8,70 @@ const testimonials = [
     role: "Software Engineer",
     message:
       "Being recognized as 'Star of the Month' has motivated me to push my limits further!",
+    image: "https://randomuser.me/api/portraits/men/1.jpg", // Placeholder image
+    rating: 5, // Out of 5 stars
   },
   {
     name: "Jane Smith",
     role: "Product Manager",
     message:
       "The Wall of Fame is an incredible way to celebrate our team's hard work.",
+    image: "https://randomuser.me/api/portraits/women/1.jpg", // Placeholder image
+    rating: 4,
   },
 ];
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-16 bg-gray-100">
+    <section id="testimonials">
       {/* Section Title */}
       <motion.h2
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-4xl font-extrabold text-f89633 mb-8 text-center"
+        className="testimonials-title"
       >
         What Our Employees Say
       </motion.h2>
-
       {/* Testimonial Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 max-w-4xl mx-auto">
+      <div className="testimonials-grid">
         {testimonials.map((testimonial, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: index * 0.2 }}
-            className="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform"
+            className="testimonial-card"
           >
             {/* Quote Icon */}
-            <div className="text-3xl text-f89633 mb-4">
-              <FaQuoteLeft />
-            </div>
-
+            <div className="quote-icon">“</div>
             {/* Testimonial Message */}
-            <p className="text-lg italic text-black leading-relaxed">
-              {testimonial.message}
-            </p>
-
+            <p className="testimonial-message">{testimonial.message}</p>
             {/* Author Details */}
-            <div className="mt-4">
-              <h4 className="font-bold text-black">{testimonial.name}</h4>
-              <p className="text-sm text-gray-600">{testimonial.role}</p>
+            <div className="author-details">
+              {/* Avatar */}
+              <img
+                src={testimonial.image}
+                alt={testimonial.name}
+                className="author-avatar"
+              />
+              <div>
+                <h4 className="author-name">{testimonial.name}</h4>
+                <p className="author-role">{testimonial.role}</p>
+                {/* Star Rating */}
+                <div className="star-rating">
+                  {[...Array(5)].map((_, i) => (
+                    <svg
+                      key={i}
+                      className={`${i < testimonial.rating ? "filled" : ""}`}
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                  ))}
+                </div>
+              </div>
             </div>
           </motion.div>
         ))}
