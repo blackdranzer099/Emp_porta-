@@ -1,0 +1,125 @@
+/* Responsive Grid */
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.gap-4 {
+  gap: 1rem; /* Small gap */
+}
+
+.gap-8 {
+  gap: 2rem; /* Medium gap */
+}
+
+.gap-16 {
+  gap: 4rem; /* Large gap */
+}
+
+/* Padding Utilities */
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Margin Utilities */
+.mb-4 {
+  margin-bottom: 1rem; /* Small margin */
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem; /* Medium margin */
+}
+
+.mb-8 {
+  margin-bottom: 2rem; /* Large margin */
+}
+
+.mt-4 {
+  margin-top: 1rem; /* Small margin */
+}
+
+.mt-8 {
+  margin-top: 2rem; /* Medium margin */
+}
+
+.mt-16 {
+  margin-top: 4rem; /* Large margin */
+}
+
+/* Text Alignment */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Rounded Corners */
+.rounded-sm {
+  border-radius: 0.125rem; /* Small radius */
+}
+
+.rounded-md {
+  border-radius: 0.375rem; /* Medium radius */
+}
+
+.rounded-lg {
+  border-radius: 0.5rem; /* Large radius */
+}
+
+.rounded-full {
+  border-radius: 9999px; /* Fully rounded */
+}
+
+/* Shadows */
+.shadow-sm {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Small shadow */
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Medium shadow */
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Large shadow */
+}
+
+.shadow-none {
+  box-shadow: none; /* No shadow */
+}

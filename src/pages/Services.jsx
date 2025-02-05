@@ -17,30 +17,35 @@ const servicesList = [
     title: "Employee Awards & Recognition",
     description:
       "Recognize outstanding employees with awards and achievements tracking.",
+    extraText: "Track employee achievements and milestones.",
     icon: <FaAward />,
   },
   {
     title: "Performance Tracking",
     description:
       "Monitor employee performance, set goals, and receive continuous feedback.",
+    extraText: "Set SMART goals and track progress.",
     icon: <FaChartLine />,
   },
   {
     title: "Peer-to-Peer Recognition",
     description:
       "Encourage a positive culture where employees can appreciate each other.",
+    extraText: "Enable peer recognition to boost morale.",
     icon: <FaHandshake />,
   },
   {
     title: "Rewards & Incentives",
     description:
       "Assign points, badges, and rank employees on leaderboards.",
+    extraText: "Motivate employees with rewards and incentives.",
     icon: <FaGift />,
   },
   {
     title: "Event & Celebration Management",
     description:
       "Automate birthday & work anniversary reminders and event planning.",
+    extraText: "Celebrate special occasions with automated reminders.",
     icon: <FaCalendarAlt />,
   },
 ];
@@ -56,6 +61,8 @@ const Services = () => {
     autoplaySpeed: 3000,
     pauseOnHover: true,
     centerMode: false, // Disable center mode for better alignment
+    variableWidth: false, // Disable variable width for consistent sliding
+    arrows: true, // Enable arrows for navigation
     responsive: [
       {
         breakpoint: 1024,
@@ -87,7 +94,6 @@ const Services = () => {
       >
         Explore our range of services designed to enhance employee engagement and productivity.
       </motion.p>
-
       {/* Slider for Service Cards */}
       <Slider {...sliderSettings} className="services-slider">
         {servicesList.map((service, index) => (
@@ -102,11 +108,16 @@ const Services = () => {
             <div className="icon">{service.icon}</div>
             <h3>{service.title}</h3>
             <p>{service.description}</p>
-            <button className="learn-more-btn">Learn More</button>
+            <div className="extra-text">{service.extraText}</div>
+            <button
+              className="learn-more-btn"
+              aria-label={`Learn more about ${service.title}`}
+            >
+              Learn More
+            </button>
           </motion.div>
         ))}
       </Slider>
-
       {/* Call-to-Action Button */}
       <motion.div
         className="cta-button-container"
@@ -115,7 +126,12 @@ const Services = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.4 }}
       >
-        <button className="cta-button">Get Started Today</button>
+        <button
+          className="cta-button"
+          aria-label="Get started with our services today"
+        >
+          Get Started Today
+        </button>
       </motion.div>
     </section>
   );

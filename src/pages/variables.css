@@ -1,0 +1,99 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* CSS Variables */
+:root {
+  /* Colors */
+  --primary-color: #f89633b9; /* Main brand color (orange) */
+  --secondary-color: #f8621c; /* Secondary brand color (darker orange) */
+  --text-color: #333; /* Default text color */
+  --light-text-color: #666; /* Lighter text color for descriptions */
+  --bg-color: #ffffff; /* Background color */
+  --card-bg-color: #f9f9f9; /* Background color for cards or sections */
+  --border-color: #e2e8f0; /* Border color for dividers or outlines */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow for hover effects */
+
+  /* Typography */
+  --font-family: "Poppins", sans-serif; /* Default font family */
+  --font-size-base: 1rem; /* Base font size (16px) */
+  --font-size-small: 0.875rem; /* Small font size (14px) */
+  --font-size-large: 1.25rem; /* Large font size (20px) */
+  --font-weight-normal: 400; /* Normal font weight */
+  --font-weight-bold: 600; /* Bold font weight */
+  --font-weight-extrabold: 700; /* Extra bold font weight */
+
+  /* Spacing */
+  --spacing-small: 0.5rem; /* Small spacing */
+  --spacing-medium: 1rem; /* Medium spacing */
+  --spacing-large: 2rem; /* Large spacing */
+
+  /* Transitions */
+  --transition-duration: 0.3s; /* Default transition duration */
+  --transition-timing: ease-in-out; /* Default transition timing function */
+}
+
+/* Global Reset */
+* {
+  margin: 0; /* Reset all margins */
+  padding: 0; /* Reset all paddings */
+  box-sizing: border-box; /* Ensure padding and borders are included in element dimensions */
+}
+
+/* Base Styles */
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.75;
+  padding-top: 6rem; /* Adds padding to account for the fixed navbar */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-bold);
+  color: var(--text-color);
+  margin-bottom: var(--spacing-medium);
+}
+
+p {
+  font-size: var(--font-size-base);
+  color: #000000 ;
+  margin-bottom: var(--spacing-medium);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition-duration) var(--transition-timing);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  border: none;
+  padding: var(--spacing-small) var(--spacing-medium);
+  border-radius: 0.25rem;
+  transition: background-color var(--transition-duration) var(--transition-timing),
+              transform var(--transition-duration) var(--transition-timing);
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}

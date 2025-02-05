@@ -1,0 +1,143 @@
+/* Section Styling */
+#contact {
+    padding: 7rem 0;
+    background: linear-gradient(135deg, hwb(0 97% 3%), #ffffff);
+    text-align: center;
+  }
+  
+  /* Form Container */
+  form {
+    position: relative;
+    z-index: 10;
+    margin: 0 auto;
+    max-width: 32rem; /* Slightly wider for better spacing */
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white for a frosted glass effect */
+    border-radius: 1rem; /* Rounded corners for a modern look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+  }
+  
+  /* Input Fields */
+  input,
+  textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    background: rgba(245, 245, 245, 0.8); /* Light background for contrast */
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: var(--primary-color); /* Highlight border on focus */
+    box-shadow: 0 0 10px rgba(248, 150, 51, 0.3); /* Glow effect on focus */
+    outline: none; /* Remove default browser outline */
+  }
+  
+  /* Error Styling */
+  input.error,
+  textarea.error {
+    border-color: red;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.3); /* Red glow for errors */
+  }
+  
+  /* Labels */
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    text-transform: uppercase; /* Uppercase labels for emphasis */
+    letter-spacing: 0.1rem; /* Spacing between letters */
+  }
+  
+  /* Submit Button */
+  button {
+    width: 30%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  button:hover {
+    background: var(--secondary-color); /* Secondary color on hover */
+    transform: scale(1.05); /* Slight scaling effect */
+  }
+  
+  button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none; /* Disable scaling when button is disabled */
+  }
+  
+  /* Success Message */
+  .success-message {
+    color: green;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    animation: fadeIn 1s ease-in-out; /* Smooth fade-in animation */
+  }
+  
+  /* Fade-In Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    form {
+      padding: 1.5rem;
+    }
+  
+    input,
+    textarea,
+    button {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Hover Effects for Inputs */
+  input:hover,
+  textarea:hover {
+    border-color: var(--primary-color); /* Highlight border on hover */
+  }
+  
+  /* Placeholder Styling */
+  input::placeholder,
+  textarea::placeholder {
+    color: #aaa; /* Light gray placeholder text */
+    font-style: italic;
+  }
+  
+  /* Additional Animations */
+  form {
+    animation: slideIn 1s ease-in-out; /* Slide-in animation for the form */
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

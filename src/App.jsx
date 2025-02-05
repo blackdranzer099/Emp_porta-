@@ -1,14 +1,17 @@
+// App.jsx
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar"; // Adjust path if necessary
-import Footer from "./components/Footer"; // Adjust path if necessary
-import ParticleBackground from "./components/ParticleBackground"; // Adjust path if necessary
-import Home from "./pages/Home"; // New Home page component
-import About from "./pages/About"; // Adjust path if necessary
-import Services from "./pages/Services"; // Adjust path if necessary
-import Testimonials from "./pages/Testimonials"; // Adjust path if necessary
-import ContactForm from "./pages/ContactForm"; // Adjust path if necessary
-import DemoFormPage from "./pages/DemoFormPage"; // Adjust path if necessary
+import "./Pages/variables.css"; // Import global CSS variables
+import "./Pages/base.css"; // Import global base styles
+import Navbar from "./components/Navbar"; // Import Navbar component
+import Footer from "./components/Footer"; // Import Footer component
+import ParticleBackground from "./components/ParticleBackground"; // Import ParticleBackground component
+import Home from "./Pages/Home"; // Import Home component
+import About from "./Pages/About"; // Import About component
+import Services from "./Pages/Services"; // Import Services component
+import Testimonials from "./Pages/Testimonials"; // Import Testimonials component
+import ContactForm from "./Pages/ContactForm"; // Import ContactForm component
+import DemoFormPage from "./Pages/DemoFormPage"; // Import DemoFormPage component
 
 const App = () => {
   return (
@@ -19,7 +22,7 @@ const App = () => {
         <ParticleBackground />
 
         {/* Content */}
-        <div className="relative z-10"> {/* Ensure content is above the background */}
+        <div className="relative z-10">
           {/* Navbar */}
           <Navbar />
 
@@ -27,76 +30,22 @@ const App = () => {
           <main className="pt-24"> {/* Add padding to account for the fixed navbar */}
             <Routes>
               {/* Home Page */}
-              <Route
-                path="/"
-                element={
-                  <>
-                    <Home />
-                    <About />
-                    <Services />
-                    <Testimonials />
-                    <ContactForm />
-                    <Footer />
-                  </>
-                }
-              />
-
+              <Route path="/" element={<Home />} />
               {/* About Page */}
-              <Route
-                path="/about"
-                element={
-                  <>
-                    <About />
-                    <Footer />
-                  </>
-                }
-              />
-
+              <Route path="/about" element={<About />} />
               {/* Services Page */}
-              <Route
-                path="/services"
-                element={
-                  <>
-                    <Services />
-                    <Footer />
-                  </>
-                }
-              />
-
+              <Route path="/services" element={<Services />} />
               {/* Testimonials Page */}
-              <Route
-                path="/testimonials"
-                element={
-                  <>
-                    <Testimonials />
-                    <Footer />
-                  </>
-                }
-              />
-
+              <Route path="/testimonials" element={<Testimonials />} />
               {/* Contact Page */}
-              <Route
-                path="/contact"
-                element={
-                  <>
-                    <ContactForm />
-                    <Footer />
-                  </>
-                }
-              />
-
+              <Route path="/contact" element={<ContactForm />} />
               {/* Demo Form Page */}
-              <Route
-                path="/demo"
-                element={
-                  <>
-                    <DemoFormPage />
-                    <Footer />
-                  </>
-                }
-              />
+              <Route path="/demo" element={<DemoFormPage />} />
             </Routes>
           </main>
+
+          {/* Footer */}
+          <Footer />
         </div>
       </div>
     </Router>

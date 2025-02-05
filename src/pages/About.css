@@ -1,0 +1,113 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Global Styles */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .section {
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .section p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  /* Hero Section */
+  #about-hero {
+    background: linear-gradient(115deg, #ffffff, #ff9800);
+    color: white;
+    padding: 100px 20px;
+  }
+  
+  #about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Mission Section */
+  #mission-vision {
+    background: #f9f9f9;
+    padding: 60px 0;
+  }
+  
+  .mission-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .icon-lg {
+    font-size: 4rem;
+    color: #f8621c;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  /* Slider Styles */
+  .swiper-container {
+    width: 100%;
+    padding: 20px 0;
+  }
+  
+  .swiper-slide {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+  }
+  
+  .swiper-slide:hover {
+    transform: translateY(-10px);
+  }
+  
+  .swiper-slide h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .swiper-slide p {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  /* CTA Section */
+  #cta {
+    background: linear-gradient(115deg, #ffffff, #ff9800);
+    color: white;
+    padding: 80px 20px;
+  }
+  
+  .cta-button {
+    background: white;
+    color: #f8621c;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: none;
+  }
+  
+  .cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);
+  }

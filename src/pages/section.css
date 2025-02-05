@@ -1,0 +1,213 @@
+/* Centered Content */
+section {
+  text-align: center;
+  padding: 4rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Paragraph Styling */
+p {
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Hover Effects */
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+.transition-transform {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* About Section */
+#about {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+#about h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+#about p {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--text-color);
+  margin: 0 auto;
+  max-width: 42rem;
+}
+
+/* Testimonials Section */
+#testimonials {
+  padding: 7rem 0;
+  background: linear-gradient(135deg, #f7f7f7, #ffffff);
+  text-align: center;
+}
+
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+  overflow: hidden;
+  perspective: 1000px; /* Adds depth for 3D effects */
+}
+
+/* Carousel Track */
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth sliding animation */
+}
+
+/* Carousel Card */
+.carousel-card {
+  min-width: 100%; /* Each card takes full width */
+  padding: 2rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transform-style: preserve-3d; /* Enables 3D transformations */
+  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease;
+}
+.carousel-card:hover {
+  transform: scale(1.05); /* Slight 3D tilt on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+/* Quote Icon */
+.quote-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  animation: bounce 2s infinite; /* Bouncing animation for quote icon */
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Testimonial Message */
+.testimonial-message {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+/* Author Details */
+.author-details {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  margin-top: 1rem;
+}
+
+.author-avatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+.author-avatar:hover {
+  border: 3px solid var(--secondary-color);
+  box-shadow: 0 0 10px rgba(248, 150, 51, 0.5); /* Glow effect */
+}
+
+.author-name {
+  font-weight: bold;
+  color: #333;
+  margin-top: 0.5rem;
+}
+
+.author-role {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.25rem; /* Add spacing between name and role */
+}
+
+/* Star Rating */
+.star-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.5rem; /* Space between role and stars */
+  justify-content: center; /* Ensure stars are centered */
+}
+
+.star-rating svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: #ccc; /* Default gray color */
+  transition: fill 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.star-rating svg.filled {
+  fill: #ffd700; /* Yellow for filled stars */
+}
+
+.star-rating svg:hover {
+  fill: #ffcc00; /* Highlight stars on hover */
+  transform: scale(1.2); /* Scales up stars on hover */
+}
+
+/* Pagination Dots */
+.pagination-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.dot.active {
+  background: var(--primary-color);
+  transform: scale(1.2); /* Scales up active dot */
+}
+
+.dot:hover {
+  background: var(--secondary-color);
+  transform: scale(1.2); /* Scales up dots on hover */
+}
+
+/* Carousel Controls */
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.carousel-controls button {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.carousel-controls button:hover {
+  background: var(--secondary-color);
+  transform: scale(1.1); /* Scales up buttons on hover */
+}
