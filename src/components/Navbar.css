@@ -49,11 +49,11 @@ header.scrolled {
   padding: 0.5rem 1rem; /* Adds spacing */
 }
 .desktop-nav ul li a:hover {
-  color: #ff4d6d;
+  color: hsl(45, 100%, 50%);
 }
 .active {
   font-weight: bold;
-  border-bottom: 2px solid #ff4d6d;
+  border-bottom: 2px solid hsl(33, 100%, 57%);
 }
 
 /* Mobile Navigation */

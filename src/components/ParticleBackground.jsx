@@ -21,7 +21,7 @@ const Particles = () => {
       
       <PointMaterial
         transparent
-        color= "hsl(0, 0.00%, 2.70%)"// Customize based on your logo
+        color= "#ff6000"// Customize based on your logo
         size={0.02}
         sizeAttenuation
         depthWrite={false}

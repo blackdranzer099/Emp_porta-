@@ -42,7 +42,7 @@
   width: 3rem; /* Icon size */
   height: 3rem;
   margin: 0 auto var(--spacing-medium); /* Use spacing variable */
-  color: var(--primary-color); /* Use primary color variable */
+  color: #ff8000; /* Use primary color variable */
 }
 
 .story-item h3 {

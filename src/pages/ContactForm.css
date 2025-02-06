@@ -59,8 +59,8 @@
   button {
     width: 30%;
     padding: 1rem;
-    background: var(--primary-color);
-    color: #fff;
+    background: #ffa500;
+    color: hwb(0 0% 100%);
     border: none;
     border-radius: 0.5rem;
     font-size: 1rem;
@@ -71,7 +71,7 @@
   }
   
   button:hover {
-    background: var(--secondary-color); /* Secondary color on hover */
+    background: #545454; /* Secondary color on hover */
     transform: scale(1.05); /* Slight scaling effect */
   }
   

@@ -90,7 +90,7 @@ button {
 }
 
 button:hover {
-  background-color: var(--secondary-color);
+  background-color: #ffa500;
   transform: scale(1.05);
 }
 

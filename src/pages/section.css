@@ -99,7 +99,7 @@ p {
 .testimonial-message {
   font-size: 1.1rem;
   font-style: italic;
-  color: #444;
+  color: #000000;
   margin-bottom: 1rem;
 }
 
@@ -120,18 +120,18 @@ p {
 }
 .author-avatar:hover {
   border: 3px solid var(--secondary-color);
-  box-shadow: 0 0 10px rgba(248, 150, 51, 0.5); /* Glow effect */
+  box-shadow: 0 0 10px #ff8000; /* Glow effect */
 }
 
 .author-name {
   font-weight: bold;
-  color: #333;
+  color: hsl(0, 0%, 0%);
   margin-top: 0.5rem;
 }
 
 .author-role {
   font-size: 0.9rem;
-  color: #666;
+  color: #000000;
   margin-top: 0.25rem; /* Add spacing between name and role */
 }
 
@@ -147,16 +147,16 @@ p {
 .star-rating svg {
   width: 1.2rem;
   height: 1.2rem;
-  fill: #ccc; /* Default gray color */
+  fill: #020000; /* Default gray color */
   transition: fill 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .star-rating svg.filled {
-  fill: #ffd700; /* Yellow for filled stars */
+  fill: hsl(51, 100%, 50%); /* Yellow for filled stars */
 }
 
 .star-rating svg:hover {
-  fill: #ffcc00; /* Highlight stars on hover */
+  fill: hsl(48, 100%, 50%); /* Highlight stars on hover */
   transform: scale(1.2); /* Scales up stars on hover */
 }
 
