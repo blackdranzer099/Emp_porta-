@@ -7,9 +7,9 @@ import "./About.css";
 
 const About = () => {
   const teamMembers = [
-    { name: "John Doe", role: "Founder & CEO", icon: <FaUserTie /> },
-    { name: "Jane Smith", role: "Head of Product", icon: <FaUserGraduate /> },
-    { name: "Emily Johnson", role: "Lead Developer", icon: <FaCode /> },
+    { name: "Sai kiran", role: "Founder & CEO", icon: <FaUserTie /> },
+    { name: "Jane", role: "Head of Product", icon: <FaUserGraduate /> },
+    { name: "Luffy", role: "Lead Developer", icon: <FaCode /> },
   ];
 
   const coreValues = [

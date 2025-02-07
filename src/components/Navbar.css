@@ -1,4 +1,3 @@
-
 /* Header Styles */
 header {
   padding: 1rem 2rem;
@@ -56,6 +55,23 @@ header.scrolled {
   border-bottom: 2px solid hsl(33, 100%, 57%);
 }
 
+/* Register Button (Desktop) */
+.register-button {
+  background-color: #ff4d6d; /* Bright red/orange color */
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+.register-button:hover {
+  background-color: #e03b5a; /* Slightly darker on hover */
+}
+.register-button.active {
+  background-color: #e03b5a; /* Active state */
+}
+
 /* Mobile Navigation */
 .mobile-nav {
   display: none; /* Hide by default */
@@ -96,6 +112,24 @@ header.scrolled {
 }
 .mobile-menu ul li a:hover {
   color: #ff4d6d;
+}
+
+/* Register Button (Mobile) */
+.mobile-menu .register-button {
+  background-color: #ff4d6d; /* Bright red/orange color */
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+.mobile-menu .register-button:hover {
+  background-color: #e03b5a; /* Slightly darker on hover */
+}
+.mobile-menu .register-button.active {
+  background-color: #e03b5a; /* Active state */
 }
 
 /* Responsive Design */

@@ -1,4 +1,3 @@
-// App.jsx
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./Pages/variables.css"; // Import global CSS variables
@@ -12,6 +11,7 @@ import Services from "./Pages/Services"; // Import Services component
 import Testimonials from "./Pages/Testimonials"; // Import Testimonials component
 import ContactForm from "./Pages/Contactus"; // Import ContactForm component
 import DemoFormPage from "./Pages/DemoFormPage"; // Import DemoFormPage component
+import RegisterForm from './components/RegisterForm'; // Import RegisterForm component
 
 const App = () => {
   return (
@@ -20,12 +20,10 @@ const App = () => {
       <div className="min-h-screen bg-gradient-to-r from-white via-f89633 to-f78f30 text-black font-sans relative">
         {/* Particle Background */}
         <ParticleBackground />
-
         {/* Content */}
         <div className="relative z-10">
           {/* Navbar */}
           <Navbar />
-
           {/* Main Content */}
           <main className="pt-24"> {/* Add padding to account for the fixed navbar */}
             <Routes>
@@ -40,10 +38,11 @@ const App = () => {
               {/* Contact Page */}
               <Route path="/contact" element={<ContactForm />} />
               {/* Demo Form Page */}
-              <Route path="/demo" element={<DemoFormPage />} />
+              <Route path="/demo-form" element={<DemoFormPage />} />
+              {/* Register Form Page */}
+              <Route path="/register" element={<RegisterForm />} />
             </Routes>
           </main>
-
           {/* Footer */}
           <Footer />
         </div>

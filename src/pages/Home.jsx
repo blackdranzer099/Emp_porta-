@@ -40,7 +40,7 @@ const Home = () => {
             transition={{ duration: 1 }}
             className="text-white"
           >
-            <h1 className="text-5xl font-extrabold mb-4">Welcome to Honor Hive</h1>
+            <h1 className="text-5xl font-extrabold mb-4">Welcome to Honor Hive ✨</h1>
             <p className="text-lg leading-relaxed mb-8">
               Celebrate excellence, recognize achievements, and foster a culture of appreciation. Join us in building a workplace where everyone feels valued.
             </p>

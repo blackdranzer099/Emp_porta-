@@ -8,7 +8,7 @@
   --secondary-color: #f8621c; /* Secondary brand color (darker orange) */
   --text-color: #333; /* Default text color */
   --light-text-color: #666; /* Lighter text color for descriptions */
-  --bg-color: #ffffff; /* Background color */
+  --bg-color: #2E2E2E; /* Background color */
   --card-bg-color: #f9f9f9; /* Background color for cards or sections */
   --border-color: #e2e8f0; /* Border color for dividers or outlines */
   --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow for hover effects */
@@ -55,13 +55,13 @@ h4,
 h5,
 h6 {
   font-weight: var(--font-weight-bold);
-  color: var(--text-color);
+  color: #ffffff;
   margin-bottom: var(--spacing-medium);
 }
 
 p {
   font-size: var(--font-size-base);
-  color: #000000 ;
+  color: #ffffff ;
   margin-bottom: var(--spacing-medium);
 }
 

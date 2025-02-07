@@ -39,7 +39,7 @@ const Navbar = () => {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           aria-label="Home"
         >
-          Honor Hive
+          Honer Hive
         </NavLink>
 
         {/* Desktop Navigation */}
@@ -83,6 +83,19 @@ const Navbar = () => {
                 aria-label="Contact"
               >
                 Contact
+              </NavLink>
+            </li>
+            {/* Register Button */}
+            <li>
+              <NavLink
+                to="/register"
+                className={({ isActive }) =>
+                  isActive ? "active register-button" : "register-button"
+                }
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                aria-label="Register"
+              >
+                Register
               </NavLink>
             </li>
           </ul>
@@ -159,6 +172,20 @@ const Navbar = () => {
                     aria-label="Contact"
                   >
                     Contact
+                  </NavLink>
+                </li>
+                {/* Register Button in Mobile Menu */}
+                <li>
+                  <NavLink
+                    to="/register"
+                    className="register-button"
+                    onClick={() => {
+                      toggleMobileMenu();
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                    aria-label="Register"
+                  >
+                    Register
                   </NavLink>
                 </li>
               </ul>

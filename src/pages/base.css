@@ -7,7 +7,7 @@
 #story h2 {
   font-size: var(--font-size-large); /* Use font size variable */
   font-weight: var(--font-weight-bold); /* Use font weight variable */
-  color: var(--text-color); /* Use text color variable */
+  color: #ffffff; /* Use text color variable */
   text-align: center;
   margin-bottom: var(--spacing-large); /* Use spacing variable */
 }
