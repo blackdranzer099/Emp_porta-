@@ -39,10 +39,11 @@
 
 /* Service Cards */
 .service-card {
-  background: rgba(255, 253, 253, 0.9); /* Slightly lighter semi-transparent background for better visibility */
+  background: rgba(255, 255, 255, 0.9); /* Slightly lighter semi-transparent background for better visibility */
   padding: 25px;
+  gap: 20px; /* Increased gap between elements */
   border-radius: 18px; /* Slightly larger radius for a modern look */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Softer shadow with transparency */
+  box-shadow: 0 6px 15px rgba(171, 20, 20, 0.1); /* Softer shadow with transparency */
   text-align: center;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
   cursor: pointer;

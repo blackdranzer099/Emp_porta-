@@ -4,64 +4,66 @@
 /* CSS Variables */
 :root {
   /* Colors */
-  --primary-color: #f89633b9; /* Main brand color (orange) */
-  --secondary-color: #f8621c; /* Secondary brand color (darker orange) */
-  --text-color: #333; /* Default text color */
-  --light-text-color: #666; /* Lighter text color for descriptions */
-  --bg-color: #2E2E2E; /* Background color */
-  --card-bg-color: #f9f9f9; /* Background color for cards or sections */
-  --border-color: #e2e8f0; /* Border color for dividers or outlines */
-  --shadow-color: rgba(0, 0, 0, 0.1); /* Subtle shadow for hover effects */
+  --primary-color: #ff7f3f; /* Vibrant orange */
+  --secondary-color: #ff5400; /* Deep orange */
+  --text-color: #333;
+  --light-text-color: #666;
+  --bg-gradient: linear-gradient(to bottom, #2e2e2e, #1a1a1a);
+  --bg-color: #2e2e2e;
+  --card-bg-color: #f9f9f9;
+  --border-color: #e2e8f0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --breakpoint-md: 768px;
+  --breakpoint-sm: 480px;
 
   /* Typography */
-  --font-family: "Poppins", sans-serif; /* Default font family */
-  --font-size-base: 1rem; /* Base font size (16px) */
-  --font-size-small: 0.875rem; /* Small font size (14px) */
-  --font-size-large: 1.25rem; /* Large font size (20px) */
-  --font-weight-normal: 400; /* Normal font weight */
-  --font-weight-bold: 600; /* Bold font weight */
-  --font-weight-extrabold: 700; /* Extra bold font weight */
+  --font-family: "Poppins", sans-serif;
+  --font-size-base: 1rem;
+  --font-size-small: 0.875rem;
+  --font-size-large: 1.25rem;
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+  --font-weight-extrabold: 700;
 
   /* Spacing */
-  --spacing-small: 0.5rem; /* Small spacing */
-  --spacing-medium: 1rem; /* Medium spacing */
-  --spacing-large: 2rem; /* Large spacing */
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+  --spacing-xlarge: 4rem;
 
   /* Transitions */
-  --transition-duration: 0.3s; /* Default transition duration */
-  --transition-timing: ease-in-out; /* Default transition timing function */
+  --transition-duration: 0.3s;
+  --transition-timing: ease-in-out;
+
+  /* Borders and Radius */
+  --border-radius: 10px;
 }
 
 /* Global Reset */
 * {
-  margin: 0; /* Reset all margins */
-  padding: 0; /* Reset all paddings */
-  box-sizing: border-box; /* Ensure padding and borders are included in element dimensions */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Base Styles */
 body {
   font-family: var(--font-family);
-  background-color: var(--bg-color);
+  background: var(--bg-gradient), var(--bg-color) !important;
   color: var(--text-color);
   line-height: 1.75;
-  padding-top: 6rem; /* Adds padding to account for the fixed navbar */
+  padding-top: 6rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: var(--font-weight-bold);
-  color: #ffffff;
+  color: var(--text-color);
   margin-bottom: var(--spacing-medium);
 }
 
 p {
   font-size: var(--font-size-base);
-  color: #ffffff ;
+  color: #fff5f5;
   margin-bottom: var(--spacing-medium);
 }
 
@@ -75,25 +77,49 @@ a:hover {
   color: var(--secondary-color);
 }
 
+/* Improved Button Styling */
 button {
   cursor: pointer;
   font-family: inherit;
   font-size: var(--font-size-base);
   font-weight: var(--font-weight-bold);
-  color: var(--text-color);
-  background-color: var(--primary-color);
+  color: white;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   border: none;
-  padding: var(--spacing-small) var(--spacing-medium);
-  border-radius: 0.25rem;
-  transition: background-color var(--transition-duration) var(--transition-timing),
-              transform var(--transition-duration) var(--transition-timing);
+  padding: var(--spacing-medium) var(--spacing-large);
+  border-radius: 50px; /* Fully rounded */
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  position: relative;
+  overflow: hidden;
 }
 
+/* Hover Effect: Scale Up + Glow */
 button:hover {
-  background-color: #ffa500;
-  transform: scale(1.05);
+  transform: scale(1.07);
+  box-shadow: 0 5px 15px rgba(255, 165, 0, 0.5);
 }
 
+/* Active Effect: Scale Down Slightly */
 button:active {
   transform: scale(0.95);
+  opacity: 0.9;
+}
+
+/* Ripple Effect on Click */
+button::after {
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  transition: transform 0.4s ease-out;
+}
+
+button:active::after {
+  transform: translate(-50%, -50%) scale(1);
 }

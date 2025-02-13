@@ -39,7 +39,7 @@ const Navbar = () => {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           aria-label="Home"
         >
-          Honer Hive
+          Honor Hive
         </NavLink>
 
         {/* Desktop Navigation */}

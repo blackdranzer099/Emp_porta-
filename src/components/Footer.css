@@ -1,82 +1,105 @@
-/* Reset all margins and padding */
+/* Footer Styles */
 footer {
   margin: 0;
-  padding: 1rem;
-  background-color: hsla(0, 1%, 19%, 0.886);
-  color: #fff; /* Default text color */
+  padding: 2rem;
+  background-color: hsla(0, 1%, 19%, 0.886); /* Dark background */
+  color: #fff; /* Ensures all text is white */
   text-align: center;
-  font-family: Arial, sans-serif; /* Fallback font */
+  font-family: Arial, sans-serif;
 }
 
+/* Ensures all text inside footer is white */
+footer * {
+  color: #fff !important;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Footer container */
 footer .container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem; /* Add padding inside the container */
+  padding: 0 1rem;
 }
 
+/* Grid layout */
 footer .grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr); /* Single column for mobile */
-  gap: 0rem;
+  gap: 1rem;
 }
 
+/* Responsive grid layout for larger screens */
 @media (min-width: 768px) {
   footer .grid {
     grid-template-columns: repeat(4, 1fr); /* Four columns for larger screens */
   }
 }
 
+/* Column styling */
 footer .col {
-  padding: 0; /* Remove padding from columns */
-  text-align: center; /* Align text to the left */
+  text-align: center;
 }
 
+/* Headings */
 footer h3,
 footer h4 {
-  font-size: 1.25rem; /* Adjust font size */
+  font-size: 1.25rem;
   font-weight: bold;
-  color: #fff; /* Default color */
-  margin-bottom: 1rem; /* Add spacing below headings */
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  color: #fff;
+  margin-bottom: 1rem;
 }
 
+/* Hover effect for all text elements */
 footer h3:hover,
-footer h4:hover {
-  color: #FFA500; /* Orange color on hover */
+footer h4:hover,
+footer .contact-info div span:hover,
+footer .address p:hover,
+footer .copyright p:hover,
+footer .follow-us a:hover {
+  color: #FFA500 !important; /* Orange color on hover */
 }
 
+/* Contact Info */
+footer .contact-info div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Contact icons */
 footer .contact-info div svg {
-  width: 1rem; /* Fixed icon size */
+  width: 1rem;
   height: 1rem;
-  margin-right: 0.5rem; /* Space between icon and text */
-  fill: #fff; /* Default icon color */
-  transition: fill 0.3s ease; /* Smooth transition for hover effect */
+  fill: #fff; /* White color for icons */
+  transition: fill 0.3s ease;
 }
 
+/* Hover effect for contact icons */
 footer .contact-info div svg:hover {
-  fill: #FFA500; /* Orange color on hover */
+  fill: #FFA500;
 }
 
+/* Follow Us Section */
 footer .follow-us a {
-  color: #fff; /* Default link color */
+  color: #fff;
   font-size: 1.5rem;
   margin-right: 0.5rem;
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
-footer .follow-us a:hover {
-  color: #FFA500; /* Orange color on hover */
-}
-
+/* Address Section */
 footer .address p {
   margin-bottom: 0.5rem;
 }
 
+/* Footer border */
 footer .border-t {
   border-top: 1px solid #444;
   padding-top: 1rem;
 }
 
+/* Copyright Text */
 footer .copyright {
   margin-top: 1rem;
+  font-size: 0.875rem;
 }

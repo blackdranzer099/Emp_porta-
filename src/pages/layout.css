@@ -20,61 +20,61 @@
 }
 
 .gap-4 {
-  gap: 1rem; /* Small gap */
+  gap: var(--spacing-small); /* Use global spacing variable */
 }
 
 .gap-8 {
-  gap: 2rem; /* Medium gap */
+  gap: var(--spacing-medium); /* Use global spacing variable */
 }
 
 .gap-16 {
-  gap: 4rem; /* Large gap */
+  gap: var(--spacing-large); /* Use global spacing variable */
 }
 
 /* Padding Utilities */
 .px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: var(--spacing-small);
+  padding-right: var(--spacing-small);
 }
 
 .px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: var(--spacing-medium);
+  padding-right: var(--spacing-medium);
 }
 
 .py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: var(--spacing-medium);
+  padding-bottom: var(--spacing-medium);
 }
 
 .py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: var(--spacing-large);
+  padding-bottom: var(--spacing-large);
 }
 
 /* Margin Utilities */
 .mb-4 {
-  margin-bottom: 1rem; /* Small margin */
+  margin-bottom: var(--spacing-small); /* Use global spacing variable */
 }
 
 .mb-6 {
-  margin-bottom: 1.5rem; /* Medium margin */
+  margin-bottom: var(--spacing-medium); /* Use global spacing variable */
 }
 
 .mb-8 {
-  margin-bottom: 2rem; /* Large margin */
+  margin-bottom: var(--spacing-large); /* Use global spacing variable */
 }
 
 .mt-4 {
-  margin-top: 1rem; /* Small margin */
+  margin-top: var(--spacing-small); /* Use global spacing variable */
 }
 
 .mt-8 {
-  margin-top: 2rem; /* Medium margin */
+  margin-top: var(--spacing-medium); /* Use global spacing variable */
 }
 
 .mt-16 {
-  margin-top: 4rem; /* Large margin */
+  margin-top: var(--spacing-large); /* Use global spacing variable */
 }
 
 /* Text Alignment */
@@ -109,15 +109,15 @@
 
 /* Shadows */
 .shadow-sm {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Small shadow */
+  box-shadow: var(--shadow-small); /* Use global shadow variable */
 }
 
 .shadow-md {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Medium shadow */
+  box-shadow: var(--shadow-medium); /* Use global shadow variable */
 }
 
 .shadow-lg {
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Large shadow */
+  box-shadow: var(--shadow-large); /* Use global shadow variable */
 }
 
 .shadow-none {

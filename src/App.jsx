@@ -12,6 +12,7 @@ import Testimonials from "./Pages/Testimonials"; // Import Testimonials componen
 import ContactForm from "./Pages/Contactus"; // Import ContactForm component
 import DemoFormPage from "./Pages/DemoFormPage"; // Import DemoFormPage component
 import RegisterForm from './components/RegisterForm'; // Import RegisterForm component
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   return (

@@ -1,113 +1,298 @@
-/* General Reset */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+/* ===================== General Styles ===================== */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffffff; /* Use the same color variable */
+}
+
+.section p {
+  font-size: 1.1rem;
+  color: var(--light-text-color); /* More flexible than fixed #555 */
+  margin-bottom: 30px;
+}
+
+
+/* ===================== Hero Section ===================== */
+#about-hero {
+  background: linear-gradient(115deg, #ffffff, #ff9800);
+  color: white;
+  padding: 100px 20px;
+}
+
+#about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* ===================== Mission Section ===================== */
+#mission-vision {
+  background: #f9f9f9;
+  padding: 60px 0;
+}
+
+.mission-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.icon-lg {
+  font-size: 4rem;
+  color: #f8621c;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ===================== Core Values Section ===================== */
+/* ===================== Core Values Section ===================== */
+#core-values {
+  padding: 60px 0;
+  text-align: center;
+}
+
+/* 🔥 Improved Core Values Layout */
+.core-values-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px; /* Ensure consistent spacing */
+}
+
+
+
+/* 🔥 Improved Core Value Cards */
+.core-value {
+  flex: 1 1 300px;
+  max-width: 320px;
+  text-align: center;
+  margin: auto; /* Centers the card */
+}
+
+/* Ensures text flows properly inside */
+.core-value p {
+  width: 90%;
+  max-width: 280px; /* Prevents excessive stretching */
+  min-height: 50px;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+
+/* 🔥 Icons - Centered & Scaled */
+.core-value i {
+  font-size: 3rem;
+  color: #f8621c;
+  margin-bottom: 12px;
+}
+
+/* 🔥 Core Value Title */
+.core-value h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #f8621c;
+}
+
+/* 🔥 Core Value Description - Balanced Readability */
+.core-value p {
+  width: 80%;  /* More flexible width */
+  min-height: 50px;  /* Ensures proper space for text */
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5; /* Improves readability */
+  text-align: center;
+  white-space: normal;  /* Allows natural text wrapping */
+  overflow-wrap: break-word; /* Prevents breaking out of container */
+}
+
+
+/* 🔥 Hover Effects */
+.core-value:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 165, 0, 0.3);
+}
+
+/* 🔥 Mobile Fix for Core Values */
+@media (max-width: 768px) {
+  .core-values-container {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  /* Global Styles */
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+
+  .core-value {
+    width: 90%;
+    max-width: 320px;
   }
-  
-  .section {
-    padding: 60px 0;
-    text-align: center;
-  }
-  
-  .section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .section p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 30px;
-  }
-  
-  /* Hero Section */
-  #about-hero {
-    background: linear-gradient(115deg, #ffffff, #ff9800);
-    color: white;
-    padding: 100px 20px;
-  }
-  
-  #about-hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  /* Mission Section */
-  #mission-vision {
-    background: #f9f9f9;
-    padding: 60px 0;
-  }
-  
-  .mission-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .icon-lg {
-    font-size: 4rem;
-    color: #f8621c;
-    display: block;
-    margin: 20px auto;
-  }
-  
-  /* Slider Styles */
-  .swiper-container {
-    width: 100%;
-    padding: 20px 0;
-  }
-  
+}
+
+
+/* ===================== Swiper Styles ===================== */
+.swiper-container {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+/* 🔥 Fixed Swiper Slides */
+.swiper-slide {
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 10px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  max-width: 340px; /* Keeps all slides consistent */
+  min-height: 280px;
+}
+
+/* 🔥 Swiper Hover Effects */
+.swiper-slide:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(255, 165, 0, 0.3);
+}
+
+/* 🔥 Swiper Title - Better Visibility */
+.swiper-slide h3 {
+  font-size: 1.5rem;
+  color: #f8621c;
+  transition: color 0.3s ease;
+}
+
+.swiper-slide h3:hover {
+  color: #ff5722;
+}
+
+/* 🔥 Swiper Text */
+.swiper-slide p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.swiper-slide p:hover {
+  color: #ff5722;
+}
+
+/* 🔥 Responsive Swiper */
+@media (max-width: 768px) {
   .swiper-slide {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    text-align: center;
+    width: 90%;
+    min-height: auto;
   }
-  
-  .swiper-slide:hover {
-    transform: translateY(-10px);
+}
+
+/* ===================== Team Section ===================== */
+.team-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-image:hover {
+  transform: scale(1.1);
+}
+
+/* Swiper Navigation */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #f8621c;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 0.8;
+}
+
+/* Swiper Pagination */
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #f8621c;
+}
+
+/* ===================== CTA Section ===================== */
+#cta {
+  background: linear-gradient(115deg, #ffffff, #ff9800);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.cta-button {
+  background: white;
+  color: #f8621c;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: none;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);
+}
+
+/* 🔥 Responsive Fixes */
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 10px;
   }
-  
-  .swiper-slide h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+
+  #about-hero {
+    padding: 80px 15px;
   }
-  
-  .swiper-slide p {
-    font-size: 0.9rem;
-    color: #777;
+
+  #about-hero h1 {
+    font-size: 2.5rem;
   }
-  
-  /* CTA Section */
-  #cta {
-    background: linear-gradient(115deg, #ffffff, #ff9800);
-    color: white;
-    padding: 80px 20px;
+
+  .swiper-slide {
+    padding: 15px;
   }
-  
+
   .cta-button {
-    background: white;
-    color: #f8621c;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    border: none;
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
-  
-  .cta-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.5);
-  }
+}
