@@ -4,96 +4,90 @@
 /* Services Section */
 .services-section {
   text-align: center;
-  padding: 50px 0; /* Remove horizontal padding for full width */
+  padding: 50px 0;
   position: relative;
-  z-index: 1; /* Ensure content stays above the particle background */
+  z-index: 1;
 }
 
 /* Section Title */
 .section-title {
   font-family: "Poppins", sans-serif;
   font-size: 2.5rem;
-  color: #000000; /* White text for better contrast */
+  color: #ffffff;
   margin-bottom: 30px;
-  position: relative;
-  z-index: 2;
 }
 
 /* Section Subtitle */
 .section-subtitle {
   font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
-  color: #000000; /* Light gray for subtitle */
+  color: #ffffff;
   margin-bottom: 40px;
-  position: relative;
-  z-index: 2;
 }
 
 /* Slider Container */
 .services-slider {
-  width: 100%; /* Full width */
-  margin: 20px; /* Center the slider */
-  overflow: hidden; /* Prevent overflow issues */
-  padding: 0; /* Remove padding for full width */
+  margin: 0 auto;
+  max-width: 1200px; /* Limit width for better alignment */
 }
 
 /* Service Cards */
 .service-card {
-  background: rgba(255, 255, 255, 0.9); /* Slightly lighter semi-transparent background for better visibility */
+  background: rgba(255, 255, 255, 0.9);
   padding: 25px;
-  gap: 20px; /* Increased gap between elements */
-  border-radius: 18px; /* Slightly larger radius for a modern look */
-  box-shadow: 0 6px 15px rgba(171, 20, 20, 0.1); /* Softer shadow with transparency */
+  border-radius: 18px;
+  box-shadow: 0 6px 15px rgba(171, 20, 20, 0.1);
   text-align: center;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Adjust content spacing */
+  justify-content: space-between;
   align-items: center;
-  height: 350px; 
-  min-height: auto;/* Increased height for consistency */
+  height: 350px;
+  min-height: auto;
   overflow: hidden;
   position: relative;
   z-index: 2;
-  margin: 15px; /* Increased margin for better spacing */
+  margin: 0 10px; /* Small margin for spacing between cards */
 }
 
+/* Hover Effect for Cards */
 .service-card:hover {
-  transform: scale(1.07); /* Slightly more pronounced scaling effect */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
-  background: rgba(240, 240, 240, 0.95); /* Subtle background change on hover */
+  transform: scale(1.07);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  background: rgba(240, 240, 240, 0.95);
 }
 
 /* Icons */
 .icon {
-  font-size: 2.8rem; /* Larger icon size */
-  color: #ff9800; /* Orange icon color */
+  font-size: 2.8rem;
+  color: #ff9800;
   margin-bottom: 12px;
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .icon:hover {
-  transform: scale(1.25); /* More noticeable scaling effect */
-  color: #ff5722; /* Darker orange on hover */
+  transform: scale(1.25);
+  color: #ff5722;
 }
 
 /* Titles */
 .service-card h3 {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: 1.4rem; /* Slightly larger font size */
-  color: #333333; /* Dark gray for better contrast */
+  font-size: 1.4rem;
+  color: #333333;
   margin-top: 10px;
   max-width: 90%;
-  white-space: normal; /* Allow text wrapping */
+  white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: color 0.3s ease-in-out; /* Smooth color transition */
+  transition: color 0.3s ease-in-out;
 }
 
 .service-card:hover h3 {
-  color: #ff5722; /* Title changes color on hover */
+  color: #ff5722;
 }
 
 /* Descriptions */
@@ -101,44 +95,44 @@
   font-family: "Poppins", sans-serif;
   max-height: 60px;
   font-size: 1rem;
-  color: #666666; /* Medium gray for descriptions */
-  padding: 0 15px; /* Increased padding for better spacing */
+  color: #666666;
+  padding: 0 15px;
   max-width: none;
   white-space: normal;
-  display: -webkit-box; /* Limit to 2 lines */
-  -webkit-box-orient: vertical; /* Allow text wrapping */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1.6; /* Improved readability */
-  transition: color 0.3s ease-in-out; /* Smooth color transition */
+  line-height: 1.6;
+  transition: color 0.3s ease-in-out;
 }
 
 .service-card:hover p {
-  color: #444444; /* Description text darkens slightly on hover */
+  color: #444444;
 }
 
 /* Extra Text Pop-up on Hover */
-.service-card .extra-text {
-  display: none; /* Hidden by default */
+.extra-text {
+  display: none;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   overflow: hidden;
-  max-height: 0; /* Initially hidden */
-  background: rgba(255, 255, 255, 0.9); /* Lighter background for better readability */
-  color: #333333; /* Dark gray for text */
+  max-height: 0;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333333;
   padding: 15px;
-  font-size: 0.95rem; /* Slightly larger font size */
+  font-size: 0.95rem;
   border-bottom-left-radius: 18px;
   border-bottom-right-radius: 18px;
   transition: all 0.3s ease-in-out;
 }
 
 .service-card:hover .extra-text {
-  display: block; /* Show on hover */
-  animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
-  padding: 15px; /* Increased padding for better spacing */
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+  padding: 15px;
 }
 
 /* Animation for Extra Text */
@@ -152,33 +146,16 @@
     transform: translateY(0);
   }
 }
-/* Learn More Button */
-.learn-more-btn {
-  margin-top: 10px;
-  padding: 8px 16px;
-  background-color: #000000; /* Orange button */
-  color: rgb(255, 136, 0);
-  border: none;
-  border-radius: 15px;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-.learn-more-btn:hover {
-  background-color: #ff5722; /* Darker orange on hover */
-  transform: scale(1.05);
-}
 
 /* Call-to-Action Button */
 .cta-button-container {
   text-align: center;
   margin-top: 40px;
-  position: relative;
-  z-index: 1;
 }
+
 .cta-button {
   padding: 12px 24px;
-  background-color: #ff9800; /* Orange button */
+  background-color: #ff9800;
   color: white;
   border: none;
   border-radius: 8px;
@@ -186,21 +163,43 @@
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
+
 .cta-button:hover {
-  background-color: #ff5722; /* Darker orange on hover */
+  background-color: #ff5722;
   transform: scale(1.05);
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .service-card {
-    min-height: auto;
-    padding: 15px;
+    height: auto;
+    padding: 20px;
   }
+
   .service-card h3 {
     font-size: 1.2rem;
   }
+
   .service-card p {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-slider {
+    margin: 0 10px;
+  }
+
+  .service-card {
+    height: auto;
+    padding: 15px;
+  }
+
+  .service-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .service-card p {
+    font-size: 0.8rem;
   }
 }

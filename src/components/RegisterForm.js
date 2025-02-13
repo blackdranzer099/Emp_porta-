@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
-import './RegisterForm.css'; // We'll add styles in this file
+import { useLocation } from 'react-router-dom';
+import './RegisterForm.css';
 
 const RegisterForm = () => {
+    const location = useLocation();
+    const selectedPlanFromState = location.state?.selectedPlan || 'free'; // Default to 'free'
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        password: '',
-        confirmPassword: '',
+        phone: '',
+        address: '',
+        plan: selectedPlanFromState, // Pre-fill the plan
     });
 
     const handleChange = (e) => {
@@ -19,26 +24,24 @@ const RegisterForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Add validation logic here (e.g., check if passwords match)
-        if (formData.password !== formData.confirmPassword) {
-            alert('Passwords do not match!');
+
+        // Add validation logic here
+        if (!formData.name || !formData.email) {
+            alert('Please fill in all required fields.');
             return;
         }
 
-        // For now, log the data to the console
+        // Simulate form submission (for now)
         console.log('Form Data Submitted:', formData);
-
-        // You can later send this data to your backend API
-        // fetch('/api/register', { method: 'POST', body: JSON.stringify(formData) })
-        //     .then(response => response.json())
-        //     .then(data => console.log(data))
-        //     .catch(error => console.error('Error:', error));
+        alert('Registration successful! Check the console for details.');
     };
 
     return (
         <div className="register-container">
-            <h2>Register</h2>
-            <form onSubmit={handleSubmit}>
+            <h2>Join Us Today</h2>
+
+            <form onSubmit={handleSubmit} className="register-form">
+                {/* Full Name */}
                 <div className="form-group">
                     <label htmlFor="name">Full Name</label>
                     <input
@@ -51,6 +54,8 @@ const RegisterForm = () => {
                         required
                     />
                 </div>
+
+                {/* Email Address */}
                 <div className="form-group">
                     <label htmlFor="email">Email Address</label>
                     <input
@@ -63,32 +68,57 @@ const RegisterForm = () => {
                         required
                     />
                 </div>
+
+                {/* Phone Number (Optional) */}
                 <div className="form-group">
-                    <label htmlFor="password">Password</label>
+                    <label htmlFor="phone">Phone Number</label>
                     <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        placeholder="Create a password"
-                        value={formData.password}
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number (optional)"
+                        value={formData.phone}
                         onChange={handleChange}
-                        required
                     />
                 </div>
+
+                {/* Address (Optional) */}
                 <div className="form-group">
-                    <label htmlFor="confirm-password">Confirm Password</label>
+                    <label htmlFor="address">Address</label>
                     <input
-                        type="password"
-                        id="confirm-password"
-                        name="confirmPassword"
-                        placeholder="Confirm your password"
-                        value={formData.confirmPassword}
+                        type="text"
+                        id="address"
+                        name="address"
+                        placeholder="Enter your address (optional)"
+                        value={formData.address}
                         onChange={handleChange}
-                        required
                     />
                 </div>
-                <button type="submit">Register</button>
+
+                {/* Plan Selection */}
+                <div className="form-group">
+                    <label htmlFor="plan">Select Plan</label>
+                    <select
+                        id="plan"
+                        name="plan"
+                        value={formData.plan}
+                        onChange={handleChange}
+                        required
+                    >
+                        <option value="free">Free</option>
+                        <option value="basic">Basic</option>
+                        <option value="pro">Pro</option>
+                        <option value="enterprise">Enterprise</option>
+                    </select>
+                </div>
+
+                {/* Submit Button */}
+                <button type="submit" className="submit-btn">
+                    Get Started
+                </button>
             </form>
+
+            {/* Login Link */}
             <div className="login-link">
                 Already have an account? <a href="/login">Login here</a>
             </div>

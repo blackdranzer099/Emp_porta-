@@ -16,22 +16,22 @@ const About = () => {
   ];
 
   const teamMembers = [
-    { name: "Neethu", role: "Marketing Manager", image: "/images/neethu.jpg" },
+    { name: "Neetu", role: "Marketing Manager", image: "/images/neethu.jpg" },
     { name: "Mithil", role: "Software Engineer", image: "/images/Mithil.jpg" },
+    { name: "Rajkumar", role: "Security Specialist", image: "/images/Saikiran.jpg" },
     { name: "Shubham", role: "Frontend Developer", image: "/images/shubham.jpg" },
     { name: "Srilekha", role: "Integration Specialist", image: "/images/srilekha.jpg" },
-    { name: "Sai Kiran", role: "Founder & CEO", image: "/images/neethu.jpg" },
+    { name: "Sai Kiran", role: "Founder & CEO", image: "/images/Saikiran.jpg" },
+    { name: "Jyothi", role: "UI/UX Designer", image: "/images/Jyothi.jpg" },
+    { name: "Anvesh", role: "Cloud Architect", image: "/images/Anvesh.jpg" },
     { name: "Mounika", role: "Head of Product", image: "/images/Mounika.jpg" },
     { name: "Rashmi", role: "Lead Developer", image: "/images/Rashmi.jpg" },
     { name: "Priyanka", role: "Backend Developer", image: "/images/Priyanka.jpg" },
-    { name: "Nami", role: "UI/UX Designer", image: "/images/neethu.jpg" },
-    { name: "Sanji", role: "DevOps Engineer", image: "/images/neethu.jpg" },
-    { name: "Robin", role: "Data Analyst", image: "/images/neethu.jpg" },
-    { name: "Chopper", role: "QA Engineer", image: "/images/neethu.jpg" },
-    { name: "Franky", role: "Cloud Architect", image: "/images/neethu.jpg" },
-    { name: "Brook", role: "Security Specialist", image: "/images/neethu.jpg" },
-    { name: "Usopp", role: "Technical Writer", image: "/images/neethu.jpg" },
-    { name: "Jimbei", role: "Support Engineer", image: "/images/neethu.jpg" },
+    { name: "Shivaji", role: "DevOps Engineer", image: "/images/Shivaji.jpg" },
+    { name: "Charan", role: "Data Analyst", image: "/images/Charan.jpg" },
+    { name: "Nandini", role: "QA Engineer", image: "/images/neethu.jpg" },
+    { name: "Usopp", role: "Technical Writer", image: "/images/Saikiran.jpg" },
+    { name: "Jimbei", role: "Support Engineer", image: "/images/Saikiran.jpg" },
   ];
 
   return (

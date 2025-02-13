@@ -48,9 +48,9 @@ const Footer = () => {
           {/* Address Section */}
           <div className="col address">
             <h4>Address</h4>
-            <p>123 Innovation Street</p>
-            <p>Tech District</p>
-            <p>San Francisco, CA 94105</p>
+            <p>Jain Sadhguru capital park</p>
+            <p>Hyderbad</p>
+            <p>15 Flames Team</p>
           </div>
         </div>
 

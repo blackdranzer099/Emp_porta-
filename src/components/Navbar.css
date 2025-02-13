@@ -141,3 +141,40 @@ header.scrolled {
     display: block;
   }
 }
+/* Navbar Container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-image {
+  width: 40px; /* Adjust the size of the logo */
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-image:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Scrolled Navbar */
+header.scrolled .logo-image {
+  width: 35px; /* Slightly smaller logo when scrolled */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .logo-image {
+    width: 35px; /* Smaller logo on mobile */
+  }
+}

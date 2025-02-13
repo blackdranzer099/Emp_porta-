@@ -1,3 +1,10 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
 .register-container {
     background-color: #ffffff;
     padding: 30px;
@@ -5,13 +12,14 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
-    margin: 0 auto;
+    margin: 50px auto; /* Centered container with spacing */
 }
 
 h2 {
     text-align: center;
     color: #333;
     margin-bottom: 20px;
+    font-size: 1.75rem; /* Slightly larger heading */
 }
 
 .form-group {
@@ -22,20 +30,33 @@ label {
     display: block;
     margin-bottom: 5px;
     color: #555;
+    font-size: 0.9rem; /* Smaller label size */
 }
 
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="tel"],
+input[type="password"],
+select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 14px;
+    transition: border-color 0.3s ease; /* Smooth focus effect */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+select:focus {
+    border-color: hsl(28, 100%, 50%); /* Highlight on focus */
+    outline: none;
 }
 
 button {
-    width: auto;
+    width: 100%; /* Full-width button for better usability */
     padding: 10px;
     background-color: hsl(28, 100%, 50%);
     color: #fff;
@@ -43,20 +64,23 @@ button {
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
 }
 
 button:hover {
-    background-color: #f6f7f7;
+    background-color: hsl(28, 100%, 40%); /* Darker shade on hover */
 }
 
 .login-link {
     text-align: center;
     margin-top: 15px;
+    font-size: 0.9rem; /* Smaller link size */
 }
 
 .login-link a {
     color: #1560b1;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .login-link a:hover {

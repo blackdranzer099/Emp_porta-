@@ -94,6 +94,7 @@ const Services = () => {
       >
         Explore our range of services designed to enhance employee engagement and productivity.
       </motion.p>
+
       {/* Slider for Service Cards */}
       <Slider {...sliderSettings} className="services-slider">
         {servicesList.map((service, index) => (
@@ -109,15 +110,10 @@ const Services = () => {
             <h3>{service.title}</h3>
             <p>{service.description}</p>
             <div className="extra-text">{service.extraText}</div>
-            <button
-              className="learn-more-btn"
-              aria-label={`Learn more about ${service.title}`}
-            >
-              Learn More
-            </button>
           </motion.div>
         ))}
       </Slider>
+
       {/* Call-to-Action Button */}
       <motion.div
         className="cta-button-container"
@@ -126,12 +122,7 @@ const Services = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.4 }}
       >
-        <button
-          className="cta-button"
-          aria-label="Get started with our services today"
-        >
-          Get Started Today
-        </button>
+        <button className="cta-button">Get Started</button>
       </motion.div>
     </section>
   );

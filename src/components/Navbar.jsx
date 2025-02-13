@@ -39,7 +39,8 @@ const Navbar = () => {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           aria-label="Home"
         >
-          Honor Hive
+          {/* Add your logo image here */}
+          <img src="/images/logo.png" alt="Honor Hive Logo" className="logo-image" />
         </NavLink>
 
         {/* Desktop Navigation */}
@@ -63,6 +64,16 @@ const Navbar = () => {
                 aria-label="Services"
               >
                 Services
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/pricing"
+                className={({ isActive }) => (isActive ? "active" : "")}
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                aria-label="Pricing"
+              >
+                Pricing
               </NavLink>
             </li>
             <li>
@@ -148,6 +159,18 @@ const Navbar = () => {
                     aria-label="Services"
                   >
                     Services
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/pricing"
+                    onClick={() => {
+                      toggleMobileMenu();
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                    aria-label="Pricing"
+                  >
+                    Pricing
                   </NavLink>
                 </li>
                 <li>

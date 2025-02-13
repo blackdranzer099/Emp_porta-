@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import "./Pages/variables.css"; // Import global CSS variables
 import "./Pages/base.css"; // Import global base styles
 import Navbar from "./components/Navbar"; // Import Navbar component
@@ -12,6 +12,7 @@ import Testimonials from "./Pages/Testimonials"; // Import Testimonials componen
 import ContactForm from "./Pages/Contactus"; // Import ContactForm component
 import DemoFormPage from "./Pages/DemoFormPage"; // Import DemoFormPage component
 import RegisterForm from './components/RegisterForm'; // Import RegisterForm component
+import Pricing from "./components/Pricing"; // Import Pricing Page
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
@@ -40,8 +41,14 @@ const App = () => {
               <Route path="/contact" element={<ContactForm />} />
               {/* Demo Form Page */}
               <Route path="/demo-form" element={<DemoFormPage />} />
+              {/* Pricing Page */}
+              <Route path="/pricing" element={<Pricing />} />
               {/* Register Form Page */}
-              <Route path="/register" element={<RegisterForm />} />
+              <Route
+                path="/register"
+                element={<RegisterForm />}
+              />
+              
             </Routes>
           </main>
           {/* Footer */}
