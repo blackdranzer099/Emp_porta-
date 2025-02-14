@@ -2,7 +2,7 @@
 .pricing-container {
     text-align: center;
     padding: 50px 15px;
-    color: black; /* Changed from white to black */
+    color: rgb(255, 255, 255); /* Changed from white to black */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -14,9 +14,9 @@ h2 {
     letter-spacing: -0.02em;
 }
 
-p {
+.pricing-container p {
     font-size: 1.2rem;
-    color: #333; /* Adjusted text color for better contrast */
+    color: #ffffff; /* Adjusted text color for better contrast */
     margin-bottom: 30px;
     line-height: 1.6;
 }

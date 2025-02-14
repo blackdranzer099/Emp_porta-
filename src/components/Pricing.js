@@ -12,7 +12,7 @@ const Pricing = () => {
 
     return (
         <div className="pricing-container">
-            <h2>Choose Your Plan</h2>
+            <h1>Choose Your Plan</h1>
             <p>Find the perfect plan for your needs.</p>
 
             <div className="pricing-grid">
