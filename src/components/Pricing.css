@@ -2,14 +2,13 @@
 .pricing-container {
     text-align: center;
     padding: 50px 15px;
-    color: white;
+    color: black; /* Changed from white to black */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
 h2 {
     font-size: 2.5rem;
-    color: #fafafa;
+    color: #ffa600;
     margin-bottom: 20px;
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -17,7 +16,7 @@ h2 {
 
 p {
     font-size: 1.2rem;
-    color: #ffffff;
+    color: #333; /* Adjusted text color for better contrast */
     margin-bottom: 30px;
     line-height: 1.6;
 }
@@ -37,6 +36,7 @@ p {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     position: relative;
     overflow: hidden;
+    color: #333; /* Ensures text inside the card is visible */
 }
 
 .pricing-card:hover {

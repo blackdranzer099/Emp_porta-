@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Removed unused 'Navigate'
 import "./Pages/variables.css"; // Import global CSS variables
 import "./Pages/base.css"; // Import global base styles
 import Navbar from "./components/Navbar"; // Import Navbar component
@@ -44,11 +44,7 @@ const App = () => {
               {/* Pricing Page */}
               <Route path="/pricing" element={<Pricing />} />
               {/* Register Form Page */}
-              <Route
-                path="/register"
-                element={<RegisterForm />}
-              />
-              
+              <Route path="/register" element={<RegisterForm />} />
             </Routes>
           </main>
           {/* Footer */}

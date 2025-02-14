@@ -4,7 +4,6 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f9f9f9; /* Light background for contrast */
 }
-
 .register-container {
     background-color: #ffffff;
     padding: 30px;
@@ -14,25 +13,21 @@ body {
     max-width: 400px;
     margin: 50px auto; /* Centered container with spacing */
 }
-
 h2 {
     text-align: center;
     color: #333;
     margin-bottom: 20px;
     font-size: 1.75rem; /* Slightly larger heading */
 }
-
 .form-group {
     margin-bottom: 15px;
 }
-
 label {
     display: block;
     margin-bottom: 5px;
-    color: #555;
+    color: hsl(0, 0%, 0%);
     font-size: 0.9rem; /* Smaller label size */
 }
-
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -40,12 +35,11 @@ input[type="password"],
 select {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #ffffff;
     border-radius: 4px;
     font-size: 14px;
     transition: border-color 0.3s ease; /* Smooth focus effect */
 }
-
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
@@ -54,9 +48,16 @@ select:focus {
     border-color: hsl(28, 100%, 50%); /* Highlight on focus */
     outline: none;
 }
-
+/* Placeholder Styling */
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="password"]::placeholder {
+    color: hwb(0 0% 100%); /* Light gray placeholder text */
+    opacity: 1; /* Ensure full visibility on all browsers */
+}
 button {
-    width: 100%; /* Full-width button for better usability */
+     /* Full-width button for better usability */
     padding: 10px;
     background-color: hsl(28, 100%, 50%);
     color: #fff;
@@ -66,23 +67,19 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease; /* Smooth hover effect */
 }
-
 button:hover {
     background-color: hsl(28, 100%, 40%); /* Darker shade on hover */
 }
-
 .login-link {
     text-align: center;
     margin-top: 15px;
     font-size: 0.9rem; /* Smaller link size */
 }
-
 .login-link a {
     color: #1560b1;
     text-decoration: none;
     font-weight: bold;
 }
-
 .login-link a:hover {
     text-decoration: underline;
 }

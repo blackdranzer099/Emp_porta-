@@ -65,7 +65,7 @@ textarea.error {
 
 /* Submit Button */
 button {
-  width: 100%;
+  
   padding: 1rem;
   background: linear-gradient(135deg, #f89633, #f78f30);
   color: #fff;
