@@ -1,7 +1,7 @@
 /* Header Styles */
 header {
   padding: 1rem 2rem;
-  
+  background: black;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
@@ -57,7 +57,7 @@ header.scrolled {
 
 /* Register Button (Desktop) */
 .register-button {
-  background-color: #ff4d6d; /* Bright red/orange color */
+  background-color: #ff7700; /* Bright red/orange color */
   color: white;
   text-decoration: none;
   font-size: 1rem;
@@ -66,10 +66,10 @@ header.scrolled {
   transition: background-color 0.3s ease;
 }
 .register-button:hover {
-  background-color: #e03b5a; /* Slightly darker on hover */
+  background-color: #fa8100; /* Slightly darker on hover */
 }
 .register-button.active {
-  background-color: #e03b5a; /* Active state */
+  background-color: #ff8000; /* Active state */
 }
 
 /* Mobile Navigation */
@@ -111,12 +111,12 @@ header.scrolled {
   font-size: 1rem;
 }
 .mobile-menu ul li a:hover {
-  color: #ff4d6d;
+  color: hsl(23, 100%, 50%);
 }
 
 /* Register Button (Mobile) */
 .mobile-menu .register-button {
-  background-color: #ff4d6d; /* Bright red/orange color */
+  background-color: #ffa200; /* Bright red/orange color */
   color: white;
   text-decoration: none;
   font-size: 1rem;

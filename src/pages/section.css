@@ -75,7 +75,7 @@ p {
   padding: 2rem;
   /* background: #ffffff; */
   border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
   text-align: center;
   transform-style: preserve-3d; /* Enables 3D transformations */
   transition: transform 0.5s ease-in-out, box-shadow 0.3s ease;

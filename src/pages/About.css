@@ -25,14 +25,21 @@
 
 /* ===================== Hero Section ===================== */
 #about-hero {
-  background: linear-gradient(115deg, #ffffff, #ff9800);
+  background: linear-gradient(115deg, #ffffff, #ff9800, #ffffff);
   color: rgb(0, 0, 0);
-  padding: 100px 20px;
+  padding: 10px 20px;
 }
 
 #about-hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
+  
+}
+#about-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #000;
 }
 
 /* ===================== Mission Section ===================== */
@@ -254,10 +261,20 @@
   padding: 80px 20px;
   text-align: center;
 }
-
+#cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #000;
+}
+#cta p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #000;
+}
 .cta-button {
   background: white;
-  color: #f8621c;
+  color: hsl(25, 94%, 54%);
   padding: 12px 24px;
   border-radius: 8px;
   font-size: 1rem;
