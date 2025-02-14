@@ -126,12 +126,12 @@ const Testimonials = () => {
 
       {/* Carousel Controls */}
       <div className="carousel-controls">
-        <button onClick={prevTestimonial} aria-label="Previous testimonial">
+        {/* <button onClick={prevTestimonial} aria-label="Previous testimonial">
           Previous
         </button>
         <button onClick={nextTestimonial} aria-label="Next testimonial">
           Next
-        </button>
+        </button> */}
       </div>
     </section>
   );
