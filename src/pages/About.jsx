@@ -86,42 +86,41 @@ const About = () => {
       </section>
 
       {/* Core Values Section */}
-      <section id="core-values" className="section">
-        <div className="container">
-          <motion.h2
-            initial={{ opacity: 0, y: -50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
-            Our Core Values
-          </motion.h2>
-          <Swiper
-            modules={[Autoplay, Pagination]} // Enable required modules
-            spaceBetween={30}
-            slidesPerView={1}
-            autoplay={{ delay: 5000 }}
-            pagination={{ clickable: true }}
-            breakpoints={{
-              640: { slidesPerView: 2 },
-              768: { slidesPerView: 3 },
-              1024: { slidesPerView: 4 },
-              1280: { slidesPerView: 5 },
-            }}
-            className="swiper-container"
-          >
-            {coreValues.map((value, index) => (
-              <SwiperSlide key={index} className="swiper-slide">
-                <motion.div whileHover={{ scale: 1.1 }}>
-                  {React.cloneElement(value.icon, { className: "icon-lg" })}
-                </motion.div>
-                <h3>{value.title}</h3>
-                <p>{value.description}</p>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </section>
-
+        <section id="core-values" className="section">
+          <div className="container">
+            <motion.h2
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >
+              Our Core Values
+            </motion.h2>
+            {/* Swiper Container */}
+            <Swiper
+              modules={[Autoplay]} // Enable Autoplay module
+              spaceBetween={30} // Space between slides
+              slidesPerView={3} // Show 3 slides at a time
+              autoplay={{ delay: 3000 }} // Automatically move every 3 seconds
+              loop={true} // Loop through slides infinitely
+              breakpoints={{
+                320: { slidesPerView: 1 }, // 1 slide on small screens
+                640: { slidesPerView: 2 }, // 2 slides on medium screens
+                1024: { slidesPerView: 3 }, // 3 slides on large screens
+              }}
+              className="swiper-container"
+            >
+              {coreValues.map((value, index) => (
+                <SwiperSlide key={index} className="swiper-slide core-value">
+                  <motion.div whileHover={{ scale: 1.05 }}>
+                    {React.cloneElement(value.icon, { className: "icon-lg" })}
+                  </motion.div>
+                  <h3>{value.title}</h3>
+                  <p>{value.description}</p>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </section>
       {/* Meet Our Team Section */}
       <section id="our-team" className="section">
         <div className="container">

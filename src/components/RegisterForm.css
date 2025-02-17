@@ -10,8 +10,9 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
+    max-width: 620px;
     margin: 50px auto; /* Centered container with spacing */
+    text-align: center;
 }
 h2 {
     text-align: center;
@@ -58,14 +59,19 @@ input[type="password"]::placeholder {
 }
 button {
      /* Full-width button for better usability */
-    padding: 10px;
-    background-color: hsl(28, 100%, 50%);
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+     display: inline-block; /* Ensures the button behaves as a block element */
+     margin: 0 auto; /* Centers the button horizontally */
+     width: 100%; /* Full-width button for better usability */
+     max-width: 200px; /* Restricts the button's maximum width for aesthetics */
+     padding: 10px;
+     background-color: hsl(28, 100%, 50%);
+     color: #fff;
+     border: none;
+     border-radius: 4px;
+     font-size: 16px;
+     cursor: pointer;
+     transition: background-color 0.3s ease; /* Smooth hover effect */
+     text-align: center; /* Ensures text inside the button is centered */
 }
 button:hover {
     background-color: hsl(28, 100%, 40%); /* Darker shade on hover */

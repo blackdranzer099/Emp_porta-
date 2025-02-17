@@ -3,6 +3,7 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 20px;
+  
 }
 
 .section {
@@ -89,15 +90,14 @@
 
 /* Ensures text flows properly inside */
 .core-value p {
-  width: 90%;
-  max-width: 280px; /* Prevents excessive stretching */
+  width: 90%;/* Prevents excessive stretching */
   min-height: 50px;
   font-size: 1rem;
   color: #444;
   line-height: 1.5;
   text-align: center;
   white-space: normal;
-  overflow-wrap: break-word;
+  overflow-wrap: anywhere;
 }
 
 
@@ -151,7 +151,7 @@
 /* ===================== Swiper Styles ===================== */
 .swiper-container {
   width: 100%;
-  padding: 20px 0;
+ 
   overflow: hidden;
 }
 
