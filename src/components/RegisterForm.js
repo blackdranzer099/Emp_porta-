@@ -108,7 +108,7 @@ const RegisterForm = () => {
                         <option value="free">Free</option>
                         <option value="basic">Basic</option>
                         <option value="pro">Pro</option>
-                        <option value="enterprise">Enterprise</option>
+                        
                     </select>
                 </div>
 

@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./Services.css";
+import "./Services.css"; // Corrected import path
 import { motion } from "framer-motion"; // For animations
 import {
   FaAward,
@@ -11,6 +11,7 @@ import {
   FaGift,
   FaCalendarAlt,
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const servicesList = [
   {
@@ -51,6 +52,8 @@ const servicesList = [
 ];
 
 const Services = () => {
+  const navigate = useNavigate(); // Initialize useNavigate
+
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -94,7 +97,6 @@ const Services = () => {
       >
         Explore our range of services designed to enhance employee engagement and productivity.
       </motion.p>
-
       {/* Slider for Service Cards */}
       <Slider {...sliderSettings} className="services-slider">
         {servicesList.map((service, index) => (
@@ -109,11 +111,9 @@ const Services = () => {
             <div className="icon">{service.icon}</div>
             <h3>{service.title}</h3>
             <p>{service.description}</p>
-            <div className="extra-text">{service.extraText}</div>
           </motion.div>
         ))}
       </Slider>
-
       {/* Call-to-Action Button */}
       <motion.div
         className="cta-button-container"
@@ -122,7 +122,12 @@ const Services = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.4 }}
       >
-        <button className="cta-button">Get Started</button>
+        <button
+          className="cta-button"
+          onClick={() => navigate("/register")} // Navigate to /register on click
+        >
+          Get Started
+        </button>
       </motion.div>
     </section>
   );

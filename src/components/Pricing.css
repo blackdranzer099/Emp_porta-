@@ -96,7 +96,7 @@ h3 {
 
 .pricing-card ul li::before {
     content: '✓';
-    color: #4caf50;
+    color: #000000;
     margin-right: 10px;
     font-size: 1.1rem;
     font-weight: bold;
@@ -127,17 +127,17 @@ button:hover {
 }
 
 .btn-free {
-    background: linear-gradient(145deg, #4caf50, #388e3c);
+    background: linear-gradient(145deg, #000000, #000000);
     color: white;
 }
 
 .btn-basic {
-    background: linear-gradient(145deg, #ff9800, #f57c00);
+    background: linear-gradient(145deg, #000000, #000000);
     color: white;
 }
 
 .btn-pro {
-    background: linear-gradient(145deg, #1560b1, #0d47a1);
+    background: linear-gradient(145deg, #000000, #000000);
     color: white;
 }
 

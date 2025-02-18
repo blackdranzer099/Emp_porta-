@@ -12,7 +12,6 @@ const Footer = () => {
             <h3>Honor Hive</h3>
             <p>Your Trusted Partner</p>
           </div>
-
           {/* Contact Section */}
           <div className="col contact-info">
             <h4>Contact</h4>
@@ -25,7 +24,6 @@ const Footer = () => {
               <span>+1 (555) 123-4567</span>
             </div>
           </div>
-
           {/* Follow Us Section */}
           <div className="col follow-us">
             <h4>Follow Us</h4>
@@ -36,7 +34,14 @@ const Footer = () => {
               <a href="#" aria-label="Twitter" className="hover:text-orange-500">
                 <Twitter size={20} />
               </a>
-              <a href="#" aria-label="LinkedIn" className="hover:text-orange-500">
+              {/* Update LinkedIn Link */}
+              <a 
+                href="https://www.linkedin.com/company/fifteen-flames/posts/?feedView=all" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="LinkedIn" 
+                className="hover:text-orange-500"
+              >
                 <Linkedin size={20} />
               </a>
               <a href="#" aria-label="Instagram" className="hover:text-orange-500">
@@ -44,7 +49,6 @@ const Footer = () => {
               </a>
             </div>
           </div>
-
           {/* Address Section */}
           <div className="col address">
             <h4>Address</h4>
@@ -53,7 +57,6 @@ const Footer = () => {
             <p>15 Flames Team</p>
           </div>
         </div>
-
         {/* Copyright Section */}
         <div className="border-t mt-8 pt-8 text-center copyright">
           <p>&copy; {new Date().getFullYear()} Honor Hive. All rights reserved.</p>

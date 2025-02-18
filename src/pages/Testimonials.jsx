@@ -2,35 +2,35 @@ import React, { useState, useEffect } from "react";
 
 const testimonials = [
   {
-    name: "John Doe",
+    name: "Murari Manama",
     role: "Software Engineer",
     message:
       "Being recognized as 'Star of the Month' has motivated me to push my limits further!",
-    image: "https://randomuser.me/api/portraits/men/1.jpg",
+    image: "/images/Murari.jpg",
     rating: 5,
   },
   {
-    name: "Jane Smith",
-    role: "Product Manager",
+    name: "Vikas Polasani",
+    role: "Snaplogic Developer",
     message:
       "The Wall of Fame is an incredible way to celebrate our team's hard work.",
-    image: "https://randomuser.me/api/portraits/women/1.jpg",
+    image: "/images/Vikas.jpg",
     rating: 4,
   },
   {
-    name: "Emily Johnson",
+    name: "Praneeth Panchagiri",
     role: "Lead Developer",
     message:
       "I love how Honor Hive fosters collaboration and innovation in the workplace.",
-    image: "https://randomuser.me/api/portraits/women/2.jpg",
+    image: "/images/Praneeth.jpg",
     rating: 5,
   },
   {
-    name: "Michael Brown",
-    role: "UX Designer",
+    name: "Geetha Naidu",
+    role: "Talent Acquisition Specialist",
     message:
       "The recognition system here truly values creativity and hard work.",
-    image: "https://randomuser.me/api/portraits/men/2.jpg",
+    image: "/images/Geetha.jpg",
     rating: 4,
   },
 ];

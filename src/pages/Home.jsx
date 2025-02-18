@@ -1,10 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Award, Users, Handshake } from "lucide-react"; // Importing icons
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "./base.css"; // Import global styles
 import "./section.css"; // Import section-specific styles
 
 const Home = () => {
+  const navigate = useNavigate(); // Initialize useNavigate
+
   // Story Data with Icons
   const storyScenes = [
     {
@@ -45,14 +48,15 @@ const Home = () => {
               Celebrate excellence, recognize achievements, and foster a culture of appreciation. Join us in building a workplace where everyone feels valued.
             </p>
             <motion.button
+              onClick={() => navigate("/pricing")} // Navigate to /pricing on click
               whileHover={{
                 scale: 1.05,
                 boxShadow: "0px 8px 16px rgba(255, 255, 255, 0.5)",
-                backgroundColor: "#ffffff",
-                color: "var(--primary-color)",
+                backgroundColor: "#ffffff", // Background turns white on hover
+                color: "var(--primary-color)", // Keep primary color for hover text
               }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white hover:bg-gray-200 text-primary py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md"
+              className="bg-primary hover:bg-white text-white py-3 px-6 rounded-lg transition duration-300 ease-in-out shadow-md"
               aria-label="Get Started Button"
             >
               Get Started
@@ -60,7 +64,6 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Story Section */}
       <section id="story" className="py-16 px-6 bg-white">
         <motion.h2

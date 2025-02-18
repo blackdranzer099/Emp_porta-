@@ -14,12 +14,11 @@ const Pricing = () => {
         <div className="pricing-container">
             <h1>Choose Your Plan</h1>
             <p>Find the perfect plan for your needs.</p>
-
             <div className="pricing-grid">
                 {/* Free Plan */}
                 <div className="pricing-card">
                     <h3>Free</h3>
-                    <div className="price">$0</div>
+                    <div className="price">₹0</div> {/* Changed to Indian Rupee */}
                     <ul>
                         <li>Basic Features</li>
                         <li>Community Support</li>
@@ -32,11 +31,10 @@ const Pricing = () => {
                         Get Started
                     </button>
                 </div>
-
                 {/* Basic Plan */}
                 <div className="pricing-card">
                     <h3>Basic</h3>
-                    <div className="price">$9</div>
+                    <div className="price">₹99</div> {/* Changed to Indian Rupee */}
                     <ul>
                         <li>All Free Features</li>
                         <li>Premium Support</li>
@@ -49,11 +47,10 @@ const Pricing = () => {
                         Choose Plan
                     </button>
                 </div>
-
                 {/* Pro Plan */}
                 <div className="pricing-card">
                     <h3>Pro</h3>
-                    <div className="price">$29</div>
+                    <div className="price">₹299</div> {/* Changed to Indian Rupee */}
                     <ul>
                         <li>All Basic Features</li>
                         <li>Priority Support</li>
@@ -64,23 +61,6 @@ const Pricing = () => {
                         onClick={() => handlePlanSelection('pro')}
                     >
                         Choose Plan
-                    </button>
-                </div>
-
-                {/* Enterprise Plan */}
-                <div className="pricing-card">
-                    <h3>Enterprise</h3>
-                    <div className="price">$99</div>
-                    <ul>
-                        <li>All Pro Features</li>
-                        <li>Dedicated Support</li>
-                        <li>Custom Solutions</li>
-                    </ul>
-                    <button
-                        className="btn-enterprise"
-                        onClick={() => handlePlanSelection('enterprise')}
-                    >
-                        Contact Us
                     </button>
                 </div>
             </div>
