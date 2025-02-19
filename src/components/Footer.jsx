@@ -38,7 +38,7 @@ const Footer = () => {
             </div>
             <div className="flex items-center">
               <Phone size={16} />
-              <span>+1 (555) 123-4567</span>
+              <span>+91 9281025609</span>
             </div>
           </div>
           {/* Follow Us Section */}
@@ -61,7 +61,14 @@ const Footer = () => {
               >
                 <Linkedin size={20} />
               </a>
-              <a href="#" aria-label="Instagram" className="hover:text-orange-500">
+              {/* Updated Instagram Link */}
+              <a 
+                href="https://www.instagram.com/15fla_mes?igsh=MWI4czYwdm8yZzVyZQ%3D%3D&utm_source=qr" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Instagram" 
+                className="hover:text-orange-500"
+              >
                 <Instagram size={20} />
               </a>
             </div>
@@ -71,7 +78,6 @@ const Footer = () => {
             <h4>Address</h4>
             <p>Jain Sadhguru capital park</p>
             <p>Hyderbad</p>
-            <p>15 Flames Team</p>
           </div>
         </div>
         {/* Copyright Section */}

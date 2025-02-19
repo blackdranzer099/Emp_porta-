@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { useLocation, Link } from "react-router-dom"; // Import Link for internal routing
-import "./RegisterForm.css"; // Import custom CSS for styling
+import { useLocation, Link } from "react-router-dom";
+import "./RegisterForm.css";
+import emailjs from "@emailjs/browser";
 
 const RegisterForm = () => {
   const location = useLocation();
@@ -12,7 +13,7 @@ const RegisterForm = () => {
     email: "",
     phone: "",
     address: "",
-    plan: selectedPlanFromState, // Pre-fill the plan
+    plan: selectedPlanFromState,
   });
 
   // Handle input changes
@@ -34,16 +35,39 @@ const RegisterForm = () => {
       return;
     }
 
-    // Simulate form submission
-    console.log("Form Data Submitted:", formData);
-    alert("Registration successful! Check the console for details.");
+    // Send email using EmailJS
+    emailjs
+      .send(
+        "YOUR_SERVICE_ID", // Replace with your EmailJS Service ID
+        "YOUR_TEMPLATE_ID", // Replace with your EmailJS Template ID
+        formData, // Form data to send
+        "YOUR_PUBLIC_KEY" // Replace with your EmailJS Public Key
+      )
+      .then(
+        (result) => {
+          console.log("Email sent successfully!", result.text);
+          alert("Registration successful! Check your email for confirmation.");
+        },
+        (error) => {
+          console.error("Failed to send email:", error.text);
+          alert("Failed to send email. Please try again later.");
+        }
+      );
+
+    // Clear the form after submission
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      address: "",
+      plan: selectedPlanFromState,
+    });
   };
 
   return (
     <div className="register-container">
       {/* Form Title */}
       <h2 className="form-title">Join Us Today</h2>
-
       {/* Registration Form */}
       <form onSubmit={handleSubmit} className="register-form">
         {/* Full Name */}
@@ -60,7 +84,6 @@ const RegisterForm = () => {
             aria-label="Full Name"
           />
         </div>
-
         {/* Email Address */}
         <div className="form-group">
           <label htmlFor="email">Email Address</label>
@@ -75,7 +98,6 @@ const RegisterForm = () => {
             aria-label="Email Address"
           />
         </div>
-
         {/* Phone Number (Optional) */}
         <div className="form-group">
           <label htmlFor="phone">Phone Number (Optional)</label>
@@ -89,7 +111,6 @@ const RegisterForm = () => {
             aria-label="Phone Number"
           />
         </div>
-
         {/* Address (Optional) */}
         <div className="form-group">
           <label htmlFor="address">Address (Optional)</label>
@@ -103,7 +124,6 @@ const RegisterForm = () => {
             aria-label="Address"
           />
         </div>
-
         {/* Plan Selection */}
         <div className="form-group">
           <label htmlFor="plan">Select Plan</label>
@@ -120,13 +140,11 @@ const RegisterForm = () => {
             <option value="pro">Pro</option>
           </select>
         </div>
-
         {/* Submit Button */}
         <button type="submit" className="submit-btn">
           Get Started
         </button>
       </form>
-
       {/* Login Link */}
       <div className="login-link">
         Already have an account?{" "}

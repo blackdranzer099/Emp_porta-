@@ -19,14 +19,14 @@ const About = () => {
   ];
 
   const teamMembers = [
-    { name: "Anvesh", role: "Integration Specialist", image: "/images/Anvesh.jpg" },
+    { name: "Anvesh", role: "Team Lead", image: "/images/Anvesh.jpg" },
     { name: "Priyanka", role: "Project Manager", image: "/images/Priyanka.jpg" },
     { name: "Jyothi", role: "UI/UX Designer", image: "/images/Jyothi.jpg" },
     { name: "Neetu", role: "Marketing Manager", image: "/images/neethu.jpg" },
     { name: "Shivaji", role: "Backend Developer", image: "/images/Shivaji.jpg" },
     { name: "Mounika", role: "Backend Developer", image: "/images/Mounika.jpg" },
     { name: "Rajkumar", role: "Full-Stack Developer", image: "/images/Rajkumar.jpg" },
-    { name: "Sai Kiran", role: "Data Engineer", image: "/images/Saikiran.jpg" },
+    { name: "Sai Kiran", role: "Full-Stack Developer", image: "/images/Saikiran.jpg" },
     { name: "Mithil", role: "Software Engineer", image: "/images/Mithil.jpg" },
     { name: "Charan", role: "Software Engineer", image: "/images/Charan.jpg" },
     { name: "Srilekha", role: "Integration Specialist", image: "/images/srilekha.jpg" },

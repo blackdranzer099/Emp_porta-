@@ -1,4 +1,6 @@
-/* Footer Styles */
+/* ===================== Footer Styles ===================== */
+
+/* Base Footer Styles */
 footer {
   margin: 0;
   padding: 2rem;
@@ -134,4 +136,105 @@ footer .powered-by a {
 
 footer .powered-by a:hover {
   color: #FFA500; /* Orange hover color */
+}
+
+/* ===================== Media Queries ===================== */
+
+/* Small Screens (Mobile Devices) */
+@media (max-width: 767px) {
+  footer {
+    padding: 1.5rem; /* Reduce padding for smaller screens */
+  }
+  footer .grid {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 1rem; /* Adjust spacing */
+  }
+  footer h3,
+  footer h4 {
+    font-size: 1.1rem; /* Slightly smaller headings */
+  }
+  footer .contact-info div svg {
+    width: 0.9rem; /* Smaller icons */
+    height: 0.9rem;
+  }
+  footer .follow-us a {
+    font-size: 1.3rem; /* Smaller social media icons */
+    margin-right: 0.3rem;
+  }
+  footer .powered-by img {
+    width: 1.75rem; /* Smaller logo */
+    height: 1.75rem;
+  }
+}
+
+/* Medium Screens (Tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  footer {
+    padding: 1.75rem; /* Slightly reduced padding */
+  }
+  footer .grid {
+    grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+    gap: 1.25rem; /* Adjust spacing */
+  }
+  footer h3,
+  footer h4 {
+    font-size: 1.2rem; /* Slightly smaller headings */
+  }
+  footer .contact-info div svg {
+    width: 0.95rem; /* Slightly smaller icons */
+    height: 0.95rem;
+  }
+  footer .follow-us a {
+    font-size: 1.4rem; /* Slightly smaller social media icons */
+    margin-right: 0.4rem;
+  }
+}
+
+/* Large Screens (Desktops) */
+@media (min-width: 1024px) {
+  footer {
+    padding: 2rem; /* Keep original padding */
+  }
+  footer .grid {
+    grid-template-columns: repeat(4, 1fr); /* Four-column layout */
+    gap: 1.5rem; /* Adjust spacing */
+  }
+  footer h3,
+  footer h4 {
+    font-size: 1.25rem; /* Original heading size */
+  }
+  footer .contact-info div svg {
+    width: 1rem; /* Original icon size */
+    height: 1rem;
+  }
+  footer .follow-us a {
+    font-size: 1.5rem; /* Original social media icon size */
+    margin-right: 0.5rem;
+  }
+  footer .powered-by img {
+    width: 2rem; /* Original logo size */
+    height: 2rem;
+  }
+}
+
+/* Extra Large Screens */
+@media (min-width: 1440px) {
+  footer .container {
+    max-width: 1400px; /* Wider container for extra-large screens */
+  }
+  footer .grid {
+    gap: 2rem; /* Increased spacing */
+  }
+  footer h3,
+  footer h4 {
+    font-size: 1.35rem; /* Larger headings */
+  }
+  footer .follow-us a {
+    font-size: 1.6rem; /* Larger social media icons */
+    margin-right: 0.6rem;
+  }
+  footer .powered-by img {
+    width: 2.25rem; /* Larger logo */
+    height: 2.25rem;
+  }
 }

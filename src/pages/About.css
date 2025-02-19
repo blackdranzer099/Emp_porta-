@@ -63,89 +63,8 @@
 }
 
 /* ===================== Core Values Section ===================== */
-/* ===================== Core Values Section ===================== */
-#core-values {
-  padding: 60px 0;
-  text-align: center;
-}
-
-/* 🔥 Improved Core Values Layout */
-.core-values-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  gap: 20px; /* Ensure consistent spacing */
-}
 
 
-
-/* 🔥 Improved Core Value Cards */
-.core-value {
-  flex: 1 1 300px;
-  max-width: 320px;
-  text-align: center;
-  margin: auto; /* Centers the card */
-}
-
-/* Ensures text flows properly inside */
-.core-value p {
-  width: 90%;/* Prevents excessive stretching */
-  min-height: 50px;
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.5;
-  text-align: center;
-  white-space: normal;
-  overflow-wrap: anywhere;
-}
-
-
-/* 🔥 Icons - Centered & Scaled */
-.core-value i {
-  font-size: 3rem;
-  color: #f8621c;
-  margin-bottom: 12px;
-}
-
-/* 🔥 Core Value Title */
-.core-value h3 {
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-  color: #f8621c;
-}
-
-/* 🔥 Core Value Description - Balanced Readability */
-.core-value p {
-  width: 80%;  /* More flexible width */
-  min-height: 50px;  /* Ensures proper space for text */
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.5; /* Improves readability */
-  text-align: center;
-  white-space: normal;  /* Allows natural text wrapping */
-  overflow-wrap: break-word; /* Prevents breaking out of container */
-}
-
-
-/* 🔥 Hover Effects */
-.core-value:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(255, 165, 0, 0.3);
-}
-
-/* 🔥 Mobile Fix for Core Values */
-@media (max-width: 768px) {
-  .core-values-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .core-value {
-    width: 90%;
-    max-width: 320px;
-  }
-}
 
 
 /* ===================== Swiper Styles ===================== */
@@ -190,7 +109,7 @@
 /* 🔥 Swiper Text */
 .swiper-slide p {
   font-size: 15px;
-  color: #444;
+  color: #ffffff;
   line-height: 1.5;
   transition: color 0.3s ease;
 }
