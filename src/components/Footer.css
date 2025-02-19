@@ -103,3 +103,35 @@ footer .copyright {
   margin-top: 1rem;
   font-size: 0.875rem;
 }
+
+/* Powered By Section */
+footer .powered-by {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem; /* Space below "Your Trusted Partner" */
+  font-size: 0.875rem; /* Smaller text size */
+}
+
+footer .powered-by p {
+  margin: 0; /* Remove default margin */
+  margin-right: 0.5rem; /* Space between "Powered by" and logo */
+}
+
+footer .powered-by img {
+  width: 2rem; /* Logo size */
+  height: 2rem;
+  margin-right: 0.25rem; /* Space between logo and team name */
+}
+
+footer .powered-by a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff; /* Default white color */
+  transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+footer .powered-by a:hover {
+  color: #FFA500; /* Orange hover color */
+}

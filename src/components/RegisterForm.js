@@ -1,129 +1,141 @@
-import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import './RegisterForm.css';
+import React, { useState } from "react";
+import { useLocation, Link } from "react-router-dom"; // Import Link for internal routing
+import "./RegisterForm.css"; // Import custom CSS for styling
 
 const RegisterForm = () => {
-    const location = useLocation();
-    const selectedPlanFromState = location.state?.selectedPlan || 'free'; // Default to 'free'
+  const location = useLocation();
+  const selectedPlanFromState = location.state?.selectedPlan || "free"; // Default to 'free'
 
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        address: '',
-        plan: selectedPlanFromState, // Pre-fill the plan
-    });
+  // State to manage form data
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    address: "",
+    plan: selectedPlanFromState, // Pre-fill the plan
+  });
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value,
-        });
-    };
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-        // Add validation logic here
-        if (!formData.name || !formData.email) {
-            alert('Please fill in all required fields.');
-            return;
-        }
+    // Basic validation
+    if (!formData.name || !formData.email) {
+      alert("Please fill in all required fields.");
+      return;
+    }
 
-        // Simulate form submission (for now)
-        console.log('Form Data Submitted:', formData);
-        alert('Registration successful! Check the console for details.');
-    };
+    // Simulate form submission
+    console.log("Form Data Submitted:", formData);
+    alert("Registration successful! Check the console for details.");
+  };
 
-    return (
-        <div className="register-container">
-            <h2>Join Us Today</h2>
+  return (
+    <div className="register-container">
+      {/* Form Title */}
+      <h2 className="form-title">Join Us Today</h2>
 
-            <form onSubmit={handleSubmit} className="register-form">
-                {/* Full Name */}
-                <div className="form-group">
-                    <label htmlFor="name">Full Name</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        placeholder="Enter your full name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-
-                {/* Email Address */}
-                <div className="form-group">
-                    <label htmlFor="email">Email Address</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Enter your email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-
-                {/* Phone Number (Optional) */}
-                <div className="form-group">
-                    <label htmlFor="phone">Phone Number</label>
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        placeholder="Enter your phone number (optional)"
-                        value={formData.phone}
-                        onChange={handleChange}
-                    />
-                </div>
-
-                {/* Address (Optional) */}
-                <div className="form-group">
-                    <label htmlFor="address">Address</label>
-                    <input
-                        type="text"
-                        id="address"
-                        name="address"
-                        placeholder="Enter your address (optional)"
-                        value={formData.address}
-                        onChange={handleChange}
-                    />
-                </div>
-
-                {/* Plan Selection */}
-                <div className="form-group">
-                    <label htmlFor="plan">Select Plan</label>
-                    <select
-                        id="plan"
-                        name="plan"
-                        value={formData.plan}
-                        onChange={handleChange}
-                        required
-                    >
-                        <option value="free">Free</option>
-                        <option value="basic">Basic</option>
-                        <option value="pro">Pro</option>
-                        
-                    </select>
-                </div>
-
-                {/* Submit Button */}
-                <button type="submit" className="submit-btn">
-                    Get Started
-                </button>
-            </form>
-
-            {/* Login Link */}
-            <div className="login-link">
-                Already have an account? <a href="/login">Login here</a>
-            </div>
+      {/* Registration Form */}
+      <form onSubmit={handleSubmit} className="register-form">
+        {/* Full Name */}
+        <div className="form-group">
+          <label htmlFor="name">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            aria-label="Full Name"
+          />
         </div>
-    );
+
+        {/* Email Address */}
+        <div className="form-group">
+          <label htmlFor="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            aria-label="Email Address"
+          />
+        </div>
+
+        {/* Phone Number (Optional) */}
+        <div className="form-group">
+          <label htmlFor="phone">Phone Number (Optional)</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter your phone number"
+            value={formData.phone}
+            onChange={handleChange}
+            aria-label="Phone Number"
+          />
+        </div>
+
+        {/* Address (Optional) */}
+        <div className="form-group">
+          <label htmlFor="address">Address (Optional)</label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            placeholder="Enter your address"
+            value={formData.address}
+            onChange={handleChange}
+            aria-label="Address"
+          />
+        </div>
+
+        {/* Plan Selection */}
+        <div className="form-group">
+          <label htmlFor="plan">Select Plan</label>
+          <select
+            id="plan"
+            name="plan"
+            value={formData.plan}
+            onChange={handleChange}
+            required
+            aria-label="Plan Selection"
+          >
+            <option value="free">Free</option>
+            <option value="basic">Basic</option>
+            <option value="pro">Pro</option>
+          </select>
+        </div>
+
+        {/* Submit Button */}
+        <button type="submit" className="submit-btn">
+          Get Started
+        </button>
+      </form>
+
+      {/* Login Link */}
+      <div className="login-link">
+        Already have an account?{" "}
+        <a href="https://honorhive-webapp.azurewebsites.net/" target="_blank" rel="noopener noreferrer">
+          Login here
+        </a>
+      </div>
+    </div>
+  );
 };
 
 export default RegisterForm;

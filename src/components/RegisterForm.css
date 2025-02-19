@@ -3,89 +3,122 @@ body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f9f9f9; /* Light background for contrast */
+    line-height: 1.6; /* Improved readability */
 }
+
 .register-container {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     width: 100%;
-    max-width: 620px;
+    max-width: 620px; /* Restricts maximum width for larger screens */
     margin: 50px auto; /* Centered container with spacing */
     text-align: center;
 }
+
 h2 {
     text-align: center;
     color: #333;
     margin-bottom: 20px;
     font-size: 1.75rem; /* Slightly larger heading */
+    font-weight: 600; /* Bold heading for emphasis */
 }
+
 .form-group {
     margin-bottom: 15px;
+    text-align: left; /* Align labels and inputs to the left */
 }
+
 label {
     display: block;
     margin-bottom: 5px;
-    color: hsl(0, 0%, 0%);
+    color: #333; /* Darker label color for better visibility */
     font-size: 0.9rem; /* Smaller label size */
+    font-weight: 500; /* Slightly bold labels */
 }
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-input[type="password"],
 select {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ffffff;
+    border: 1px solid #cccccc; /* Light gray border for input fields */
     border-radius: 4px;
     font-size: 14px;
     transition: border-color 0.3s ease; /* Smooth focus effect */
+    box-sizing: border-box; /* Ensures padding doesn't break layout */
 }
+
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
-input[type="password"]:focus,
 select:focus {
     border-color: hsl(28, 100%, 50%); /* Highlight on focus */
     outline: none;
+    box-shadow: 0 0 5px rgba(255, 95, 81, 0.5); /* Subtle glow effect on focus */
 }
+
 /* Placeholder Styling */
 input[type="text"]::placeholder,
 input[type="email"]::placeholder,
-input[type="tel"]::placeholder,
-input[type="password"]::placeholder {
-    color: hwb(0 0% 100%); /* Light gray placeholder text */
+input[type="tel"]::placeholder {
+    color: #a0a0a0; /* Light gray placeholder text */
     opacity: 1; /* Ensure full visibility on all browsers */
 }
+
 button {
-     /* Full-width button for better usability */
-     display: inline-block; /* Ensures the button behaves as a block element */
-     margin: 0 auto; /* Centers the button horizontally */
-     width: 100%; /* Full-width button for better usability */
-     max-width: 200px; /* Restricts the button's maximum width for aesthetics */
-     padding: 10px;
-     background-color: hsl(28, 100%, 50%);
-     color: #fff;
-     border: none;
-     border-radius: 4px;
-     font-size: 16px;
-     cursor: pointer;
-     transition: background-color 0.3s ease; /* Smooth hover effect */
-     text-align: center; /* Ensures text inside the button is centered */
+    display: inline-block; /* Ensures the button behaves as a block element */
+    margin: 0 auto; /* Centers the button horizontally */
+    width: 100%; /* Full-width button for better usability */
+    max-width: 200px; /* Restricts the button's maximum width for aesthetics */
+    padding: 10px;
+    background-color: hsl(28, 100%, 50%); /* Bright orange for action */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    text-align: center; /* Ensures text inside the button is centered */
 }
+
 button:hover {
     background-color: hsl(28, 100%, 40%); /* Darker shade on hover */
 }
+
 .login-link {
     text-align: center;
     margin-top: 15px;
     font-size: 0.9rem; /* Smaller link size */
+    color: #555; /* Neutral gray for secondary text */
 }
+
 .login-link a {
-    color: #1560b1;
+    color: hsl(28, 100%, 50%); /* Matches button color for consistency */
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease; /* Smooth hover effect */
 }
+
 .login-link a:hover {
     text-decoration: underline;
+    color: hsl(28, 100%, 40%); /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .register-container {
+        padding: 20px; /* Reduced padding for smaller screens */
+        margin: 30px auto; /* Reduced margin for smaller screens */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smaller heading for smaller screens */
+    }
+
+    button {
+        max-width: 100%; /* Full-width button on small screens */
+    }
 }

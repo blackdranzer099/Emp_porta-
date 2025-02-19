@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const RegisterForm = ({ onClose }) => {
+  // State to manage form data
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -10,6 +11,7 @@ const RegisterForm = ({ onClose }) => {
     message: "",
   });
 
+  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -18,6 +20,7 @@ const RegisterForm = ({ onClose }) => {
     }));
   };
 
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Thank you for booking a demo! Details: " + JSON.stringify(formData));
@@ -40,6 +43,19 @@ const RegisterForm = ({ onClose }) => {
         <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-400 mb-6">
           Book a Demo
         </h2>
+
+        {/* Login Link */}
+        <p className="text-center text-sm text-gray-600 mb-6">
+          Already have an account?{" "}
+          <a
+            href="https://honorhive-webapp.azurewebsites.net/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-orange-500 hover:underline"
+          >
+            Login here
+          </a>
+        </p>
 
         {/* Form Fields */}
         <form onSubmit={handleSubmit}>

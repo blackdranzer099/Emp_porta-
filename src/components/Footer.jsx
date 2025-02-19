@@ -11,6 +11,23 @@ const Footer = () => {
           <div className="col">
             <h3>Honor Hive</h3>
             <p>Your Trusted Partner</p>
+            {/* Powered By Section */}
+            <div className="powered-by mt-2 flex items-center">
+              <p className="text-sm">Powered by</p>
+              <a
+                href="https://www.linkedin.com/company/fifteen-flames/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center hover:text-orange-500 ml-2"
+              >
+                <img
+                  src="/images/15flames.jpg" // Replace with your team logo URL
+                  alt="15 Flames Logo"
+                  className="w-6 h-6 mr-1"
+                />
+                <span className="text-sm"></span>
+              </a>
+            </div>
           </div>
           {/* Contact Section */}
           <div className="col contact-info">
