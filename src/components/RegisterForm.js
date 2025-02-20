@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "./RegisterForm.css";
-import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify"; // Import toastify
+import "react-toastify/dist/ReactToastify.css"; // Import default styles
 
 const RegisterForm = () => {
   const location = useLocation();
@@ -9,10 +10,9 @@ const RegisterForm = () => {
 
   // State to manage form data
   const [formData, setFormData] = useState({
-    name: "",
+    fullName: "",
     email: "",
-    phone: "",
-    address: "",
+    phoneNumber: "",
     plan: selectedPlanFromState,
   });
 
@@ -26,42 +26,55 @@ const RegisterForm = () => {
   };
 
   // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Basic validation
-    if (!formData.name || !formData.email) {
-      alert("Please fill in all required fields.");
+    if (!formData.fullName || !formData.email || !formData.phoneNumber) {
+      toast.error("Please fill in all required fields."); // Toast error message
       return;
     }
 
-    // Send email using EmailJS
-    emailjs
-      .send(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS Service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS Template ID
-        formData, // Form data to send
-        "YOUR_PUBLIC_KEY" // Replace with your EmailJS Public Key
-      )
-      .then(
-        (result) => {
-          console.log("Email sent successfully!", result.text);
-          alert("Registration successful! Check your email for confirmation.");
-        },
-        (error) => {
-          console.error("Failed to send email:", error.text);
-          alert("Failed to send email. Please try again later.");
+    // Prepare the payload for the API
+    const payload = {
+      EmployeeId: "default-id", // Use a default value or generate dynamically
+      FullName: formData.fullName,
+      Email: formData.email,
+      PhoneNumber: formData.phoneNumber,
+    };
+
+    try {
+      // Send data to the API
+      const response = await fetch(
+        "https://honorhive-api.azurewebsites.net/registration/Admin",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json", // Specify JSON content type
+          },
+          body: JSON.stringify(payload), // Convert payload to JSON
         }
       );
 
-    // Clear the form after submission
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      address: "",
-      plan: selectedPlanFromState,
-    });
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error("API Error:", errorData);
+        toast.error(`Failed to register: ${errorData.message || "Unknown error"}`); // Toast error message
+        return;
+      }
+
+      toast.success("Registration successful! Check your email for confirmation."); // Toast success message
+      // Clear the form after successful submission
+      setFormData({
+        fullName: "",
+        email: "",
+        phoneNumber: "",
+        plan: selectedPlanFromState,
+      });
+    } catch (error) {
+      console.error("Error:", error);
+      toast.error("An error occurred. Please try again later."); // Toast error message
+    }
   };
 
   return (
@@ -72,18 +85,19 @@ const RegisterForm = () => {
       <form onSubmit={handleSubmit} className="register-form">
         {/* Full Name */}
         <div className="form-group">
-          <label htmlFor="name">Full Name</label>
+          <label htmlFor="fullName">Full Name</label>
           <input
             type="text"
-            id="name"
-            name="name"
+            id="fullName"
+            name="fullName"
             placeholder="Enter your full name"
-            value={formData.name}
+            value={formData.fullName}
             onChange={handleChange}
             required
             aria-label="Full Name"
           />
         </div>
+
         {/* Email Address */}
         <div className="form-group">
           <label htmlFor="email">Email Address</label>
@@ -98,32 +112,22 @@ const RegisterForm = () => {
             aria-label="Email Address"
           />
         </div>
-        {/* Phone Number (Optional) */}
+
+        {/* Phone Number */}
         <div className="form-group">
-          <label htmlFor="phone">Phone Number (Optional)</label>
+          <label htmlFor="phoneNumber">Phone Number</label>
           <input
             type="tel"
-            id="phone"
-            name="phone"
+            id="phoneNumber"
+            name="phoneNumber"
             placeholder="Enter your phone number"
-            value={formData.phone}
+            value={formData.phoneNumber}
             onChange={handleChange}
+            required
             aria-label="Phone Number"
           />
         </div>
-        {/* Address (Optional) */}
-        <div className="form-group">
-          <label htmlFor="address">Address (Optional)</label>
-          <input
-            type="text"
-            id="address"
-            name="address"
-            placeholder="Enter your address"
-            value={formData.address}
-            onChange={handleChange}
-            aria-label="Address"
-          />
-        </div>
+
         {/* Plan Selection */}
         <div className="form-group">
           <label htmlFor="plan">Select Plan</label>
@@ -140,18 +144,38 @@ const RegisterForm = () => {
             <option value="pro">Pro</option>
           </select>
         </div>
+
         {/* Submit Button */}
         <button type="submit" className="submit-btn">
           Get Started
         </button>
       </form>
+
       {/* Login Link */}
       <div className="login-link">
         Already have an account?{" "}
-        <a href="https://honorhive-webapp.azurewebsites.net/" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://honorhive-webapp.azurewebsites.net/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Login here
         </a>
       </div>
+
+      {/* Toast Container */}
+      <ToastContainer
+        position="top-center" // Position the toast in the center
+        autoClose={5000} // Auto close after 5 seconds
+        hideProgressBar={false} // Show progress bar
+        newestOnTop={false} // Newest toast on top
+        closeOnClick={true} // Close on click
+        rtl={false} // Right-to-left support
+        pauseOnFocusLoss={true} // Pause when window loses focus
+        draggable={true} // Allow dragging
+        pauseOnHover={true} // Pause on hover
+        closeButton={false} // Remove the close button
+      />
     </div>
   );
 };

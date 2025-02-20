@@ -122,3 +122,40 @@ button:hover {
         max-width: 100%; /* Full-width button on small screens */
     }
 }
+/* Custom Toastify Styles */
+.Toastify__toast {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Same font as the app */
+    font-size: 0.9rem; /* Match the font size of labels */
+    line-height: 1.6; /* Improved readability */
+    background-color: #ffffff; /* White background for contrast */
+    color: #333; /* Dark text for better visibility */
+    border: 1px solid #cccccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 10px; /* Padding inside the toast */
+}
+
+.Toastify__toast--success {
+    background-color: #d4edda; /* Light green for success */
+    color: #155724; /* Dark green text */
+    border-color: #c3e6cb; /* Green border */
+}
+
+.Toastify__toast--error {
+    background-color: #f8d7da; /* Light red for error */
+    color: #721c24; /* Dark red text */
+    border-color: #f5c6cb; /* Red border */
+}
+
+.Toastify__progress-bar {
+    background-color: hsl(28, 100%, 50%); /* Matches button color for consistency */
+    height: 4px; /* Thinner progress bar */
+}
+
+/* Center Align Toast Content */
+.Toastify__toast-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
