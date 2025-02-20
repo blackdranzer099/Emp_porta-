@@ -5,39 +5,47 @@ import "./Pricing.css";
 const Pricing = () => {
   const navigate = useNavigate();
 
-  // Hardcoded pricing plans with relevant features
+  // Simplified pricing plans
   const plans = [
     {
       name: "Free",
-      price: "₹0", // Indian Rupee
+      basePrice: "₹0",
+      includedUsers: 5,
       features: [
         "Peer-to-Peer Recognition",
         "Basic Badges and Kudos",
-        "Up to 5 Team Members",
         "Community Support",
       ],
     },
     {
       name: "Basic",
-      price: "₹99", // Indian Rupee
+      basePrice: "₹99",
+      includedUsers: 10,
       features: [
-        "All Free Features",
         "Advanced Badges and Rewards",
-        "Up to 20 Team Members",
         "Weekly Recognition Reports",
         "Premium Support",
       ],
     },
     {
       name: "Pro",
-      price: "₹299", // Indian Rupee
+      basePrice: "₹199",
+      includedUsers: 20,
       features: [
-        "All Basic Features",
-        "Unlimited Team Members",
         "Custom Branding for Badges",
         "Monthly Engagement Analytics",
         "Priority Support",
         "Integration with HR Tools",
+      ],
+    },
+    {
+      name: "Enterprise",
+      basePrice: "₹499",
+      includedUsers: 50,
+      features: [
+        "Unlimited Customization",
+        "Dedicated Account Manager",
+        "Advanced Security Features",
       ],
     },
   ];
@@ -55,7 +63,10 @@ const Pricing = () => {
         {plans.map((plan, index) => (
           <div className="pricing-card" key={index}>
             <h3>{plan.name}</h3>
-            <div className="price">{plan.price}</div>
+            <div className="price">{plan.basePrice}</div>
+            <div className="included-users">
+              Includes up to {plan.includedUsers} users
+            </div>
             <ul>
               {plan.features.map((feature, idx) => (
                 <li key={idx}>{feature}</li>

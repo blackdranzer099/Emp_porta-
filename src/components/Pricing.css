@@ -30,13 +30,17 @@ h2 {
 
 .pricing-card {
     background: white;
-    padding: 20px 20px;
+    padding: 20px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     position: relative;
     overflow: hidden;
     color: #333; /* Ensures text inside the card is visible */
+    display: flex;
+    flex-direction: column; /* Ensure content stacks vertically */
+    justify-content: space-between; /* Push button to the bottom */
+    height: 100%; /* Ensure all cards have the same height */
 }
 
 .pricing-card:hover {
@@ -84,6 +88,7 @@ h3 {
     list-style: none;
     padding: 0;
     margin: 20px 0;
+    flex-grow: 1; /* Allow the list to grow and fill available space */
 }
 
 .pricing-card ul li {
@@ -119,6 +124,10 @@ button {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-self: center; /* Center the button horizontally */
+    width: 100%; /* Make the button full-width for better alignment */
+    max-width: 200px; /* Restrict maximum width for aesthetics */
+    margin: 0 auto; /* Center the button if needed */
 }
 
 button:hover {
