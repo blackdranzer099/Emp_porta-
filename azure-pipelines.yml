@@ -18,18 +18,6 @@ stages:
         version: '20.x'  # Ensure Node.js v20 is used
 
     - script: |
-        echo "Checking file structure before build..."
-        dir /s src\pages
-      displayName: 'Debug File Structure'
-
-    - script: |
-        echo "Fixing case sensitivity issues..."
-        rename-item src/pages/Contactform.css src/pages/Contactform_temp.css
-        rename-item src/pages/Contactform_temp.css src/pages/Contactform.css
-      displayName: 'Fix Case-Sensitivity Issues'
-      continueOnError: true  # Allow pipeline to continue if this fails
-
-    - script: |
         echo "Installing dependencies..."
         npm ci
       displayName: 'Install Dependencies'
