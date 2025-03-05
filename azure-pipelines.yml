@@ -18,8 +18,14 @@ stages:
         version: '20.x' # Ensure Node.js v20 is used
 
     - script: |
-        echo "Installing dependencies..."
-        npm ci
+        echo "Checking for missing files..."
+        ls -l src/pages || ls -l src/Pages
+      displayName: 'Debug: Check if files exist'
+
+    - script: |
+        echo "Cleaning up old dependencies..."
+        rm -rf node_modules package-lock.json
+        npm install
       displayName: 'Install Dependencies'
 
     - script: |
