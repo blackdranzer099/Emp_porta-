@@ -1,0 +1,33 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  imageName: 'react-app'
+  imageTag: 'v1.0'
+
+stages:
+- stage: Build
+  jobs:
+  - job: BuildImage
+    steps:
+    - task: UseNode@1
+      inputs:
+        version: '20.x' # Ensure Node.js v20 is used
+
+    - script: |
+        echo "Installing dependencies..."
+        npm ci
+      displayName: 'Install Dependencies'
+
+    - script: |
+        echo "Building React app..."
+        npm run build
+      displayName: 'Build React App'
+
+    - script: |
+        echo "Building Docker image..."
+        docker build -t $(imageName):$(imageTag) .
+      displayName: 'Build Docker Image'
