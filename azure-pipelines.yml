@@ -2,16 +2,12 @@ trigger:
 - main
 
 pool:
-  name: Default  # Replace with the name of your self-hosted agent pool
-
-variables:
-  imageName: 'react-app'
-  imageTag: 'v1.0'
+  name: Default  # Replace with your self-hosted agent pool
 
 stages:
 - stage: Build
   jobs:
-  - job: BuildImage
+  - job: BuildReactApp
     steps:
     - task: UseNode@1
       inputs:
@@ -27,7 +23,8 @@ stages:
         npm run build
       displayName: 'Build React App'
 
-    - script: |
-        echo "Building Docker image..."
-        docker build --no-cache -t $(imageName):$(imageTag) .
-      displayName: 'Build Docker Image'
+    - task: PublishBuildArtifacts@1
+      inputs:
+        pathToPublish: 'build'
+        artifactName: 'ReactBuild'
+      displayName: 'Publish Build Artifacts'
