@@ -18,6 +18,18 @@ stages:
         version: '20.x' # Ensure Node.js v20 is used
 
     - script: |
+        echo "Checking file structure before build..."
+        ls -R src/pages
+      displayName: 'Debug File Structure'
+
+    - script: |
+        echo "Ensuring correct case for Contactform.css..."
+        git mv src/pages/Contactform.css src/pages/Contactform_temp.css
+        git mv src/pages/Contactform_temp.css src/pages/Contactform.css
+      displayName: 'Fix Case-Sensitivity Issues'
+      continueOnError: true # Allow pipeline to continue if this fails
+
+    - script: |
         echo "Installing dependencies..."
         npm ci
       displayName: 'Install Dependencies'
@@ -29,5 +41,5 @@ stages:
 
     - script: |
         echo "Building Docker image..."
-        docker build -t $(imageName):$(imageTag) .
+        docker build --no-cache -t $(imageName):$(imageTag) .
       displayName: 'Build Docker Image'
