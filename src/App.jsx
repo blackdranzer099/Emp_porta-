@@ -5,7 +5,6 @@ import {
   Workflow, Database, Cloud, Code2, Layers3, ShieldCheck, Terminal,
   Cpu, GitBranch, Sparkles, Menu, X, ExternalLink, Braces, Network
 } from "lucide-react";
-import "./App.css";
 
 const rise = {
   hidden: { opacity: 0, y: 28 },
