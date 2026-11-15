@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
-  ArrowDownRight, ArrowUpRight, ArrowRight, Github, Linkedin, Mail,
-  Workflow, Database, Cloud, Code2, Layers3, ShieldCheck, Terminal,
-  Cpu, GitBranch, Sparkles, Menu, X, ExternalLink, Braces, Network
+  ArrowDownRight, ArrowUpRight, Workflow, Database, Cloud, Layers3, ShieldCheck,
+  Terminal, Sparkles, Menu, X, Braces
 } from "lucide-react";
 
 const rise = {
